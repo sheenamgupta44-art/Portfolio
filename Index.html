@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheenam Gupta — Analytics Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f0e0d;--paper:#f5f2ed;--accent:#c85a1e;--a2:#2b5f8c;--muted:#6b6560;--rule:#d8d2c8;--tagbg:#eae6df;--card:#fff;--green:#2e7d32;--red:#c62828;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.65;}
+/* HEADER */
+header{background:var(--ink);color:var(--paper);padding:56px 72px 46px;position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;top:-60px;right:-60px;width:340px;height:340px;border-radius:50%;background:var(--accent);opacity:.09;}
+.hl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+header h1{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:1.05;margin-bottom:8px;}
+header h1 em{color:var(--accent);font-style:normal;}
+.hsub{font-size:15px;color:rgba(245,242,237,.65);max-width:540px;margin-bottom:28px;font-weight:300;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{background:rgba(245,242,237,.1);border:1px solid rgba(245,242,237,.18);color:rgba(245,242,237,.82);padding:4px 12px;border-radius:18px;font-size:12px;}
+/* NAV */
+nav{background:var(--card);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:100;padding:0 72px;display:flex;overflow-x:auto;}
+nav a{color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:500;padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .18s;letter-spacing:.2px;}
+nav a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+main{max-width:1100px;margin:0 auto;padding:56px 36px 90px;}
+/* SECTION HEADER */
+.sh{margin:64px 0 30px;display:flex;align-items:center;gap:16px;}
+.sn{font-family:'Playfair Display',serif;font-size:58px;font-weight:900;color:var(--rule);line-height:1;flex-shrink:0;}
+.st h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;}
+.st p{font-size:12.5px;color:var(--muted);margin-top:3px;}
+/* CARD */
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;margin-bottom:36px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:box-shadow .2s;}
+.card:hover{box-shadow:0 8px 28px rgba(0,0,0,.09);}
+.ch{padding:24px 28px 18px;border-bottom:1px solid var(--rule);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.ch h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:5px;}
+.ch p{font-size:12.5px;color:var(--muted);line-height:1.55;max-width:560px;}
+.role-badge{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;padding:4px 10px;border-radius:4px;letter-spacing:.8px;text-transform:uppercase;flex-shrink:0;}
+.r1{background:#f0f4f8;color:#2b5f8c;}
+.r2{background:#f4f0f8;color:#6a2b8c;}
+.r3{background:#f0f8f2;color:#2b6a3a;}
+/* TWO COL */
+.c2{display:grid;grid-template-columns:240px 1fr;border-top:1px solid var(--rule);}
+.c2>*{padding:20px 24px;}
+.c2>*:first-child{border-right:1px solid var(--rule);}
+.cl{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+/* DS LIST */
+.ds{list-style:none;padding:0;}
+.ds li{display:flex;gap:8px;margin-bottom:9px;align-items:flex-start;}
+.dsi{width:18px;height:18px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;margin-top:2px;}
+.dsi.db{background:#e3f0fb;color:#1a5c8c;}.dsi.ev{background:#fff3e0;color:#c85a1e;}.dsi.cal{background:#e8f5e9;color:#2e7d32;}
+.ds-d strong{display:block;font-size:12.5px;font-weight:600;color:var(--ink);}
+.ds-d span{font-size:11.5px;color:var(--muted);}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.tag{background:var(--tagbg);color:var(--muted);padding:2px 8px;border-radius:3px;font-size:11px;font-weight:500;font-family:'DM Mono',monospace;}
+/* IMPACT */
+.imp{background:var(--ink);color:var(--paper);padding:14px 28px;display:flex;align-items:center;gap:10px;}
+.imp p{font-size:12.5px;color:rgba(245,242,237,.82);}
+.imp strong{color:var(--accent);}
+/* DASH AREA */
+.da{padding:0;border-top:1px solid var(--rule);background:#fafaf8;}
+/* FILTER BAR */
+.fb{background:#f0ede8;border-bottom:1px solid var(--rule);padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.fb-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-right:4px;}
+.fchip{background:white;border:1px solid var(--rule);border-radius:4px;padding:4px 10px;font-size:11px;color:var(--ink);display:flex;align-items:center;gap:5px;cursor:default;}
+.fchip .fc-val{font-weight:600;color:var(--accent2);font-family:'DM Mono',monospace;}
+.fchip .arrow{color:var(--muted);font-size:9px;}
+.param{background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:11px;display:flex;align-items:center;gap:5px;}
+.param .pv{font-family:'DM Mono',monospace;color:var(--accent);}
+/* VIZ AREA */
+.vz{padding:16px 20px;}
+.vz-lbl{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.vz-lbl::after{content:'';flex:1;height:1px;background:var(--rule);}
+/* KPI STRIP */
+.ks{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+.kp{background:white;border:1px solid var(--rule);border-radius:7px;padding:10px 14px;flex:1;min-width:80px;text-align:center;}
+.kv{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1;margin-bottom:2px;}
+.kv.g{color:var(--green);}.kv.o{color:var(--accent);}.kv.r{color:var(--red);}.kv.b{color:var(--a2);}
+.kl{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+.kd{font-size:10px;margin-top:2px;font-family:'DM Mono',monospace;}
+.kd.u{color:var(--green);}.kd.d{color:var(--red);}
+/* PANEL GRID */
+.pg{display:grid;gap:12px;margin-bottom:12px;}
+.pg2{grid-template-columns:1fr 1fr;}.pg3{grid-template-columns:1fr 1fr 1fr;}.pg12{grid-template-columns:1.2fr 1fr;}
+.pn{background:white;border:1px solid var(--rule);border-radius:7px;overflow:hidden;}
+.ph{background:var(--tagbg);padding:7px 12px;font-size:10px;font-weight:600;color:var(--muted);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+.ph span{font-size:9px;color:var(--muted);}
+.pb{padding:12px;}
+/* BAR ROWS */
+.br{display:flex;align-items:center;gap:7px;margin-bottom:6px;}
+.bl{font-size:10.5px;color:var(--muted);width:88px;flex-shrink:0;text-align:right;}
+.bt{flex:1;height:13px;background:var(--tagbg);border-radius:2px;}
+.bf{height:13px;border-radius:2px;}
+.bv{font-size:10.5px;font-family:'DM Mono',monospace;font-weight:600;width:42px;}
+.ce{background:#ef5350;}.co{background:#ffa726;}.cg{background:#66bb6a;}.cb{background:#42a5f5;}.ct{background:#26c6da;}.cp{background:#ab47bc;}.ci{background:var(--a2);}
+/* TABLE */
+.t{width:100%;border-collapse:collapse;font-size:11.5px;}
+.t th{background:var(--tagbg);padding:6px 9px;text-align:left;font-size:10.5px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--rule);}
+.t td{padding:6px 9px;border-bottom:1px solid var(--rule);}
+.t tr:last-child td{border-bottom:none;}
+.t tr:nth-child(even) td{background:#fafaf8;}
+.g{color:var(--green);font-weight:700;}.o{color:var(--accent);font-weight:700;}.r{color:var(--red);font-weight:700;}.n{color:var(--muted);}
+/* BADGES */
+.bok{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;background:#e8f5e9;color:#2e7d32;}
+.bwn{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;background:#fff3e0;color:#c85a1e;}
+.bbd{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;background:#fde8e8;color:#c62828;}
+/* DOH bars */
+.dbr{margin-bottom:8px;}
+.dlr{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:2px;}
+.dbt{height:9px;background:var(--tagbg);border-radius:3px;}
+.dbf{height:9px;border-radius:3px;}
+/* AB cards */
+.abg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.abc{border:1px solid var(--rule);border-radius:7px;overflow:hidden;}
+.abh{padding:9px 12px;font-size:11.5px;font-weight:600;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+.abh.win{background:#e8f5e9;color:#2e7d32;}.abh.hld{background:var(--tagbg);color:var(--muted);}
+.abv{font-size:9.5px;padding:2px 6px;border-radius:3px;font-weight:700;}
+.vl{background:#2e7d32;color:white;}.vi{background:#6b6560;color:white;}
+.abb{padding:10px 12px;}
+.abr{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:4px;}
+.abk{color:var(--muted);}
+.abval{font-family:'DM Mono',monospace;font-weight:600;}
+.abval.p{color:var(--green);}.abval.n{color:var(--red);}
+/* Funnel */
+.fn{display:flex;flex-direction:column;gap:4px;}
+.fr{display:flex;align-items:center;gap:8px;}
+.fl{font-size:10.5px;color:var(--muted);width:104px;text-align:right;flex-shrink:0;}
+.ftr{flex:1;height:18px;background:var(--tagbg);border-radius:2px;}
+.ff{height:18px;border-radius:2px;}
+.fp{font-size:10.5px;font-family:'DM Mono',monospace;font-weight:600;width:34px;}
+.fd{font-size:9.5px;color:var(--red);font-family:'DM Mono',monospace;}
+/* fin table */
+.ft{width:100%;border-collapse:collapse;font-size:11.5px;}
+.ft th{background:var(--ink);color:rgba(245,242,237,.72);padding:6px 9px;text-align:left;font-size:10.5px;font-weight:500;}
+.ft td{padding:6px 9px;border-bottom:1px solid var(--rule);}
+.ft tr:last-child td{border-bottom:none;}
+.ft tr:nth-child(even) td{background:#fafaf8;}
+/* Waterfall */
+.wf{display:flex;align-items:flex-end;gap:5px;height:90px;position:relative;padding-bottom:16px;}
+.wf::after{content:'';position:absolute;bottom:16px;left:0;right:0;height:1px;background:var(--rule);}
+.wc{display:flex;flex-direction:column;align-items:center;flex:1;gap:3px;position:relative;}
+.wp{font-size:9.5px;font-family:'DM Mono',monospace;color:var(--muted);}
+.wr{width:100%;border-radius:3px 3px 0 0;}
+.wn{font-size:8.5px;color:var(--muted);text-align:center;position:absolute;bottom:1px;width:100%;}
+/* Sparkline SVG */
+.spk{width:100%;height:65px;}
+/* Pie chart SVG */
+.pie-wrap{display:flex;align-items:center;gap:14px;}
+.pie-legend{display:flex;flex-direction:column;gap:5px;}
+.pie-item{display:flex;align-items:center;gap:6px;font-size:11px;}
+.pie-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+/* Histogram */
+.hist{display:flex;align-items:flex-end;gap:3px;height:70px;padding-bottom:14px;position:relative;}
+.hist::after{content:'';position:absolute;bottom:14px;left:0;right:0;height:1px;background:var(--rule);}
+.hb{flex:1;border-radius:2px 2px 0 0;}
+.hx{display:flex;gap:3px;margin-top:3px;}
+.hxl{flex:1;font-size:8px;color:var(--muted);text-align:center;}
+/* Scatter */
+.scatter-wrap{position:relative;height:80px;border-left:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:4px 0;}
+.dot{position:absolute;border-radius:50%;opacity:.8;}
+/* Gov */
+.gov{background:var(--card);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-bottom:20px;}
+.govh{background:var(--ink);color:var(--paper);padding:18px 28px;display:flex;align-items:center;gap:14px;}
+.govic{font-size:26px;}
+.govh h3{font-family:'Playfair Display',serif;font-size:19px;margin-bottom:2px;}
+.govh p{font-size:12px;color:rgba(245,242,237,.55);}
+.g2{display:grid;grid-template-columns:1fr 1fr;}
+.gc{padding:20px 28px;border-right:1px solid var(--rule);}
+.gc:last-child{border-right:none;}
+.gc h4{font-size:12.5px;font-weight:600;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent);display:inline-block;}
+.gc ul{padding-left:15px;}
+.gc ul li{font-size:12.5px;margin-bottom:7px;line-height:1.5;}
+.dt{width:100%;border-collapse:collapse;font-size:11.5px;}
+.dt th{background:var(--tagbg);padding:6px 10px;text-align:left;font-size:10.5px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--rule);}
+.dt td{padding:6px 10px;border-bottom:1px solid var(--rule);vertical-align:top;}
+.dt tr:last-child td{border-bottom:none;}
+.sp2{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--a2);}
+.dn2{font-size:10.5px;color:var(--muted);}
+footer{background:var(--ink);color:rgba(245,242,237,.45);text-align:center;padding:28px;font-size:12px;margin-top:56px;}
+footer a{color:var(--accent);text-decoration:none;}
+@media(max-width:780px){header{padding:36px 20px;}header h1{font-size:34px;}nav{padding:0 12px;}main{padding:36px 16px;}.c2{grid-template-columns:1fr;}.pg2,.pg3,.pg12{grid-template-columns:1fr;}.abg{grid-template-columns:1fr;}.g2{grid-template-columns:1fr;}.sn{font-size:38px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:48px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:280px;">
+      <div class="hl">Analytics Portfolio · 2019 – Present</div>
+      <h1>Sheenam <em>Gupta</em></h1>
+      <p class="hsub">Data Analytics Manager · 7+ years across e-commerce, grocery supply chain &amp; marketplace product analytics</p>
+      <div class="pills">
+        <span class="pill">Redshift SQL</span><span class="pill">Snowflake</span><span class="pill">Tableau</span><span class="pill">Power BI</span>
+        <span class="pill">Python · Airflow</span><span class="pill">A/B Testing</span><span class="pill">Data Governance</span><span class="pill">BigQuery</span><span class="pill">Adobe Analytics</span>
+      </div>
+    </div>
+<div style="flex-shrink:0;text-align:center;">
+      <svg width="280" height="250" viewBox="0 0 280 250" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 6px 18px rgba(0,0,0,0.28));">
+        <!-- Title: Where I Create Impact -->
+        <text x="140" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="white">Where I <tspan text-decoration="underline">Create</tspan> Impact</text>
+
+        <!-- Circle 1: Data Analytics Engineering (top center) - TEAL -->
+        <circle cx="140" cy="95" r="72" fill="#2E9E8F" fill-opacity="0.85"/>
+
+        <!-- Circle 2: Product (bottom left) - BLUE -->
+        <circle cx="95" cy="163" r="72" fill="#2B5FA3" fill-opacity="0.85"/>
+
+        <!-- Circle 3: Operations/Supply Chain (bottom right) - CORAL/ORANGE -->
+        <circle cx="185" cy="163" r="72" fill="#D4714A" fill-opacity="0.85"/>
+
+        <!-- Labels -->
+        <text x="140" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="white">Data Analytics</text>
+        <text x="140" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="white">Engineering</text>
+
+        <text x="68" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="white">Product</text>
+
+        <text x="213" y="194" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="white">Operations /</text>
+        <text x="213" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="700" fill="white">Supply Chain</text>
+
+        <!-- Center intersection text -->
+        <text x="140" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="white">Cross-Functional</text>
+        <text x="140" y="136" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="white">Leadership</text>
+        <text x="140" y="147" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="white">User Behavior</text>
+        <text x="140" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="white">Data-Driven</text>
+        <text x="140" y="169" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="white">Strategy</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#inv">Inventory Dashboards</a>
+  <a href="#invhealth">Inventory Health</a>
+  <a href="#fillrate">Fill Rate / PO Plan</a>
+  <a href="#irs">Replenishment IRS</a>
+  <a href="#wmt">Fulfillment Scorecard</a>
+  <a href="#safeway">A/B &amp; Funnel Analytics</a>
+  <a href="#gov">Data Governance</a>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════════════
+     01 · INVENTORY DASHBOARDS
+══════════════════════════════════════ -->
+<div class="sh" id="inv">
+  <div class="sn">01</div>
+  <div class="st"><h2>Inventory Operations Dashboard Suite</h2><p>Expiration risk · OOS analytics · Product availability · Finance reporting</p></div>
+</div>
+
+<!-- 1A Expiration Risk — Time Series + Horizon bars + SKU table -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Inventory Control &amp; Expiration Risk</h3><p>Monitors expiration risk across fulfillment centers by warehouse and department. Used in weekly WBR reviews to proactively flag SKUs at spoilage risk before they impact inventory costs.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Inventory Location History</strong><span>Bin-level expiration dates and quantities per warehouse location</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product Master</strong><span>SKU attributes — shelf life, department, storage type, ethnicity</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Warehouse Dimension</strong><span>Facility names and region mapping across all FCs</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Calendar Dimension</strong><span>Rolling date spine for trend and WoW comparisons</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">CTEs</span><span class="tag">Window Fns</span><span class="tag">LOD Exprs</span><span class="tag">WBR-Ready</span></div>
+    </div>
+    <div style="padding:0;">
+      <!-- FILTER BAR -->
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Date Range <span class="fc-val">Last 3 Mo</span><span class="arrow">▾</span></span>
+        <span class="fchip">Warehouse <span class="fc-val">All (9)</span><span class="arrow">▾</span></span>
+        <span class="fchip">Department <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Storage Type <span class="fc-val">Dry</span><span class="arrow">▾</span></span>
+        <span class="fchip">Tier <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">Color by <span class="pv">Department</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv r">896</div><div class="kl">SKUs at Risk</div><div class="kd d">Exp &lt;3 months</div></div>
+          <div class="kp"><div class="kv o">$461K</div><div class="kl">Peak WH Exp Cost</div><div class="kd d">Highest facility</div></div>
+          <div class="kp"><div class="kv g">96.2K</div><div class="kl">Total Units</div><div class="kd">Snapshot date</div></div>
+          <div class="kp"><div class="kv b">0.86%</div><div class="kl">% Total Inventory</div><div class="kd d">Expiring soon</div></div>
+        </div>
+
+        <!-- TIME SERIES: Expiry $ trend by week -->
+        <div class="vz-lbl">Expiration Risk Cost Trend by Week (Time Series)</div>
+        <div class="pg" style="grid-template-columns:1fr;">
+          <div class="pn">
+            <div class="ph">Expiry Cost at Risk ($K) · 12-Week Trend <span>Color = Department | Hover for SKU count</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:90px;" viewBox="0 0 560 90" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ef5350" stop-opacity=".2"/><stop offset="100%" stop-color="#ef5350" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#42a5f5" stop-opacity=".15"/><stop offset="100%" stop-color="#42a5f5" stop-opacity="0"/></linearGradient>
+                </defs>
+                <!-- Dry Grocery line -->
+                <path d="M0,72 L46,65 L93,60 L140,55 L186,48 L233,44 L280,38 L326,35 L373,30 L420,26 L466,21 L513,17 L560,13" fill="none" stroke="#ef5350" stroke-width="2"/>
+                <path d="M0,72 L46,65 L93,60 L140,55 L186,48 L233,44 L280,38 L326,35 L373,30 L420,26 L466,21 L513,17 L560,13 L560,90 L0,90Z" fill="url(#tg1)"/>
+                <!-- Beverage line -->
+                <path d="M0,80 L46,76 L93,72 L140,68 L186,64 L233,60 L280,56 L326,54 L373,50 L420,48 L466,45 L513,42 L560,40" fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="6,3"/>
+                <path d="M0,80 L46,76 L93,72 L140,68 L186,64 L233,60 L280,56 L326,54 L373,50 L420,48 L466,45 L513,42 L560,40 L560,90 L0,90Z" fill="url(#tg2)"/>
+                <!-- Reference line -->
+                <line x1="0" y1="35" x2="560" y2="35" stroke="#ffa726" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="4" y="31" font-size="8" fill="#ffa726" font-family="monospace">Alert Threshold $200K</text>
+                <text x="4" y="85" font-size="8" fill="#ef5350" font-family="monospace">── Dry/RFG</text>
+                <text x="90" y="85" font-size="8" fill="#42a5f5" font-family="monospace">- - Beverage</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-top:2px;padding:0 2px;">
+                <span>Wk1</span><span>Wk2</span><span>Wk3</span><span>Wk4</span><span>Wk5</span><span>Wk6</span><span>Wk7</span><span>Wk8</span><span>Wk9</span><span>Wk10</span><span>Wk11</span><span>Wk12</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HORIZON BAR: by warehouse + Pie by bucket -->
+        <div class="pg pg2">
+          <div class="pn">
+            <div class="ph">Expiry Risk by Warehouse <span>Sorted by $</span></div>
+            <div class="pb">
+              <div class="br"><div class="bl">FC-West-1</div><div class="bt"><div class="bf ce" style="width:90%"></div></div><div class="bv r">$461K</div></div>
+              <div class="br"><div class="bl">FC-South-2</div><div class="bt"><div class="bf ce" style="width:74%"></div></div><div class="bv r">$374K</div></div>
+              <div class="br"><div class="bl">FC-East-1</div><div class="bt"><div class="bf co" style="width:58%"></div></div><div class="bv o">$226K</div></div>
+              <div class="br"><div class="bl">FC-West-2</div><div class="bt"><div class="bf co" style="width:44%"></div></div><div class="bv o">$100K</div></div>
+              <div class="br"><div class="bl">FC-South-1</div><div class="bt"><div class="bf cg" style="width:28%"></div></div><div class="bv g">$91K</div></div>
+              <div class="br"><div class="bl">FC-Central-1</div><div class="bt"><div class="bf cg" style="width:16%"></div></div><div class="bv g">$24K</div></div>
+            </div>
+          </div>
+          <!-- PIE: risk bucket breakdown -->
+          <div class="pn">
+            <div class="ph">Expiry Bucket Distribution <span>% of at-risk units</span></div>
+            <div class="pb">
+              <div class="pie-wrap">
+                <svg width="90" height="90" viewBox="0 0 32 32">
+                  <!-- Expired: 4% -->
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ef5350" stroke-width="32" stroke-dasharray="2.5 97.5" stroke-dashoffset="0"/>
+                  <!-- <3mo risk: 58% -->
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ffa726" stroke-width="32" stroke-dasharray="36.5 63.5" stroke-dashoffset="-2.5"/>
+                  <!-- <6mo warn: 38% -->
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#66bb6a" stroke-width="32" stroke-dasharray="23.9 76.1" stroke-dashoffset="-39"/>
+                  <circle r="8" cx="16" cy="16" fill="white"/>
+                  <text x="16" y="19" text-anchor="middle" font-size="4.5" fill="var(--ink)" font-weight="bold">896</text>
+                  <text x="16" y="23" text-anchor="middle" font-size="3" fill="var(--muted)">SKUs</text>
+                </svg>
+                <div class="pie-legend">
+                  <div class="pie-item"><div class="pie-dot" style="background:#ef5350;"></div><span>Expired / Spoilage (4%)</span></div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#ffa726;"></div><span>Risk &lt;3 Months (58%)</span></div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#66bb6a;"></div><span>Warning &lt;6 Months (38%)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKU drill-down table -->
+        <div class="pn">
+          <div class="ph">SKU-Level Expiry Drill-Down · Requires Spoilage &lt;3 Months <span>Sorted by Qty Units ↓</span></div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>Workstream</th><th>Facility</th><th>SKU Count</th><th>Qty Units</th><th>% Total</th><th>Dept</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Expired · Req. Spoilage</td><td>FC-West-1</td><td>4</td><td>325</td><td class="o">0.05%</td><td>Personal Care</td><td><span class="bbd">Expired</span></td></tr>
+                <tr><td>Expiry Risk &lt;3mo</td><td>FC-East-1</td><td>196</td><td>14,871</td><td class="r">1.15%</td><td>RFG Food</td><td><span class="bbd">At Risk</span></td></tr>
+                <tr><td>Expiry Risk &lt;3mo</td><td>FC-West-2</td><td>106</td><td>11,399</td><td class="o">1.07%</td><td>Instant Food</td><td><span class="bwn">Monitor</span></td></tr>
+                <tr><td>Expiry Risk &lt;3mo</td><td>FC-South-1</td><td>42</td><td>797</td><td class="g">0.46%</td><td>Beverage</td><td><span class="bwn">Monitor</span></td></tr>
+                <tr><td><strong>Total</strong></td><td>—</td><td><strong>896</strong></td><td><strong>96,165</strong></td><td class="o"><strong>0.86%</strong></td><td>—</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p><strong>70% reduction</strong> in manual intervention · Proactive restocking enabled before stockouts occur · WBR-driven action reduced spoilage cost by <strong>~$180K/quarter</strong></p></div>
+</div>
+
+<!-- 1B OOS — Waterfall + Market heatmap + Histogram + Root cause table -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Out-of-Stock (OOS) High Level Dashboard</h3><p>Enterprise view of OOS trends, root cause waterfall, and market-level PA. Breaks down OOS drivers — vendor OOS, config error, demand underforecast — enabling targeted corrective action per market.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>PA Root Cause (FC)</strong><span>OOS reason codes broken down per FC — vendor OOS, config error, demand miss</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>PA Root Cause (DC)</strong><span>Same root cause structure at DC level for upstream attribution</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product Warehouse</strong><span>SKU status, purchase method, and vendor assignment per FC</span></div></li>
+        <li><span class="dsi ev">📦</span><div class="ds-d"><strong>IRS Calculation Output</strong><span>Target vs available qty and order recommendations from the replenishment engine</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">Waterfall Logic</span><span class="tag">Weighted OOS%</span><span class="tag">Market View</span></div>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Start Date <span class="fc-val">8/1/25</span><span class="arrow">▾</span></span>
+        <span class="fchip">End Date <span class="fc-val">2/1/26</span><span class="arrow">▾</span></span>
+        <span class="fchip">OOS Reason <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Market <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Purchase Method <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Inventory Title <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">Size by <span class="pv">Inventory $</span></span>
+        <span class="param">View <span class="pv">OOS %</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv r">10.4%</div><div class="kl">OOS %</div><div class="kd d">↑ vs last week</div></div>
+          <div class="kp"><div class="kv b">580</div><div class="kl">OOS SKUs</div><div class="kd">of 5,580 total</div></div>
+          <div class="kp"><div class="kv g">89.6%</div><div class="kl">PA %</div><div class="kd u">↑ +20% vs baseline</div></div>
+          <div class="kp"><div class="kv o">33%</div><div class="kl">Vendor OOS</div><div class="kd d">Top root cause</div></div>
+        </div>
+
+        <!-- Row 1: Waterfall + OOS trend -->
+        <div class="pg pg12">
+          <div class="pn">
+            <div class="ph">OOS % Trend by Market (Time Series) <span>6 months</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 340 80" preserveAspectRatio="none">
+                <!-- Market 1 bad -->
+                <path d="M0,60 L56,54 L113,48 L170,42 L226,36 L283,30 L340,26" fill="none" stroke="#ef5350" stroke-width="2"/>
+                <!-- Market 2 med -->
+                <path d="M0,68 L56,63 L113,58 L170,53 L226,48 L283,44 L340,41" fill="none" stroke="#ffa726" stroke-width="2" stroke-dasharray="6,3"/>
+                <!-- Market 3 good -->
+                <path d="M0,72 L56,70 L113,66 L170,62 L226,59 L283,57 L340,55" fill="none" stroke="#66bb6a" stroke-width="2" stroke-dasharray="3,3"/>
+                <text x="3" y="25" font-size="7.5" fill="#ef5350" font-family="monospace">── Market A</text>
+                <text x="3" y="34" font-size="7.5" fill="#ffa726" font-family="monospace">- - Market B</text>
+                <text x="3" y="43" font-size="7.5" fill="#66bb6a" font-family="monospace">··· Market C</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-top:2px;"><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span></div>
+            </div>
+          </div>
+          <div class="pn">
+            <div class="ph">Root Cause Waterfall</div>
+            <div class="pb">
+              <div class="wf">
+                <div class="wc"><div class="wp r">-33%</div><div class="wr" style="height:72px;background:#1a5c8c;"></div><div class="wn">Vendor OOS</div></div>
+                <div class="wc"><div class="wp o">-23%</div><div class="wr" style="height:52px;background:#5c8c2b;"></div><div class="wn">Demand ↑</div></div>
+                <div class="wc"><div class="wp" style="color:var(--accent)">-4.7%</div><div class="wr" style="height:20px;background:#c85a1e;"></div><div class="wn">Config</div></div>
+                <div class="wc"><div class="wp r">-2.7%</div><div class="wr" style="height:13px;background:#8c2b2b;"></div><div class="wn">DC-FC</div></div>
+                <div class="wc"><div class="wp n">-1%</div><div class="wr" style="height:6px;background:#aaa;"></div><div class="wn">Other</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: OOS histogram + reason heatmap -->
+        <div class="pg pg2" style="margin-top:0;">
+          <div class="pn">
+            <div class="ph">OOS Duration Distribution (Histogram) <span>How long SKUs stay OOS</span></div>
+            <div class="pb">
+              <div class="hist">
+                <div class="hb" style="height:28%;background:#66bb6a;"></div>
+                <div class="hb" style="height:52%;background:#66bb6a;"></div>
+                <div class="hb" style="height:78%;background:#ffa726;"></div>
+                <div class="hb" style="height:65%;background:#ffa726;"></div>
+                <div class="hb" style="height:44%;background:#ef5350;"></div>
+                <div class="hb" style="height:30%;background:#ef5350;"></div>
+                <div class="hb" style="height:18%;background:#ef5350;"></div>
+                <div class="hb" style="height:10%;background:#8c2b2b;"></div>
+              </div>
+              <div class="hx"><div class="hxl">1d</div><div class="hxl">2-3d</div><div class="hxl">4-7d</div><div class="hxl">1-2w</div><div class="hxl">2-3w</div><div class="hxl">3-4w</div><div class="hxl">1-2m</div><div class="hxl">>2m</div></div>
+              <div style="font-size:10px;color:var(--muted);margin-top:4px;">Most OOS events resolve in 4–7 days · Chronic OOS (&gt;1 month) flagged for escalation</div>
+            </div>
+          </div>
+          <div class="pn">
+            <div class="ph">OOS Reason by Market <span>% contribution</span></div>
+            <div class="pb" style="overflow-x:auto;">
+              <table class="t">
+                <thead><tr><th>Market</th><th>Vendor OOS</th><th>Config Err</th><th>Demand Miss</th><th>DC Short.</th><th>Total OOS%</th></tr></thead>
+                <tbody>
+                  <tr><td>Market A</td><td class="r">4.2%</td><td class="o">2.1%</td><td class="r">3.8%</td><td class="n">0.7%</td><td class="r">10.8%</td></tr>
+                  <tr><td>Market B</td><td class="r">3.8%</td><td class="o">1.8%</td><td class="o">3.1%</td><td class="n">0.7%</td><td class="o">9.4%</td></tr>
+                  <tr><td>Market C</td><td class="o">1.9%</td><td class="g">0.8%</td><td class="o">2.4%</td><td class="n">0.5%</td><td class="g">5.6%</td></tr>
+                  <tr><td>Market D</td><td class="g">0.9%</td><td class="g">0.5%</td><td class="g">1.2%</td><td class="n">0.3%</td><td class="g">2.9%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p><strong>+20% improvement</strong> in product availability · Time-to-diagnose OOS root cause reduced from <strong>days → minutes</strong></p></div>
+</div>
+
+<!-- 1C Finance Forecast vs Actuals -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Finance Forecast vs Actuals — by Customer Segment</h3><p>Executive WBR report tracking revenue actuals vs finance plan by customer ethnicity segment, with WoW and QTD variance. Single source of truth for weekly Finance &amp; Operations reviews.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Order Metrics</strong><span>Revenue actuals by customer segment, week, and sales region</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product Master</strong><span>Ethnicity tagging — maps revenue to customer segments</span></div></li>
+        <li><span class="dsi ev">📊</span><div class="ds-d"><strong>Finance Plan (ETL)</strong><span>Weekly revenue targets ingested from Finance planning tool by segment</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Calendar Dimension</strong><span>WoW, QTD, and 2HTD period bucketing</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">Cond. Format</span><span class="tag">QTD Rollup</span><span class="tag">WoW Delta</span><span class="tag">Exec WBR</span></div>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Week <span class="fc-val">Latest</span><span class="arrow">▾</span></span>
+        <span class="fchip">Segment <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Region <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">View <span class="pv">% Delta vs Plan</span></span>
+        <span class="param">Period <span class="pv">QTD</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv" style="font-size:18px;">$18.3M</div><div class="kl">Last Wk Actual</div><div class="kd d">vs $19.1M plan</div></div>
+          <div class="kp"><div class="kv r">-4%</div><div class="kl">Wk Delta vs Plan</div><div class="kd d">Below target</div></div>
+          <div class="kp"><div class="kv r">-$19.3M</div><div class="kl">QTD Variance</div><div class="kd d">-10% vs plan</div></div>
+          <div class="kp"><div class="kv g">+13%</div><div class="kl">WoW Trend</div><div class="kd u">vs prior week</div></div>
+        </div>
+
+        <!-- Diverging bar chart: % delta vs plan per segment -->
+        <div class="vz-lbl">Revenue % Delta vs Finance Plan by Segment (Diverging Bar Chart)</div>
+        <div class="pg" style="grid-template-columns:1fr;">
+          <div class="pn">
+            <div class="ph">% Delta vs Finance Plan — by Customer Segment <span>Green = above plan · Red = below plan</span></div>
+            <div class="pb">
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <!-- diverging bars centered at 0 -->
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment A</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;right:50%;width:17%;height:100%;background:#ef5350;border-radius:2px 0 0 2px;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#ef5350;font-weight:700;">-8%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment B</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;right:50%;width:34%;height:100%;background:#ef5350;border-radius:2px 0 0 2px;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#ef5350;font-weight:700;">-17%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment C</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;right:50%;width:24%;height:100%;background:#ef5350;border-radius:2px 0 0 2px;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#ef5350;font-weight:700;">-12%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment D</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;left:50%;width:18%;height:100%;background:#66bb6a;border-radius:0 2px 2px 0;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#2e7d32;font-weight:700;">+9%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment E</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;left:50%;width:6%;height:100%;background:#66bb6a;border-radius:0 2px 2px 0;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#2e7d32;font-weight:700;">+3%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;">
+                  <div style="width:80px;text-align:right;color:var(--muted);">Segment F</div>
+                  <div style="flex:1;display:flex;align-items:center;position:relative;height:16px;">
+                    <div style="position:absolute;left:50%;width:1px;height:100%;background:var(--rule);"></div>
+                    <div style="position:absolute;left:50%;width:42%;height:100%;background:#2e7d32;border-radius:0 2px 2px 0;"></div>
+                  </div>
+                  <div style="width:36px;font-family:monospace;font-size:10.5px;color:#2e7d32;font-weight:700;">+84%</div>
+                </div>
+              </div>
+              <div style="font-size:9.5px;color:var(--muted);margin-top:8px;text-align:center;">← Below Plan &nbsp;|&nbsp; Above Plan →</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finance scorecard table -->
+        <div class="pn" style="margin-top:12px;">
+          <div class="ph" style="background:var(--ink);color:rgba(245,242,237,.8);">Finance vs Plan Scorecard — by Customer Segment · Last Week (Real Data)</div>
+          <div class="pb" style="padding:0;overflow-x:auto;">
+            <table class="ft">
+              <thead><tr><th>Segment</th><th>Plan ($K)</th><th>Actual ($K)</th><th>% Delta</th><th>QTD Act%</th><th>2HTD Var $K</th><th>WoW W-1</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Total</strong></td><td>$19,147</td><td>$18,292</td><td class="r">-4%</td><td class="r">-10%</td><td class="r">-$22,704</td><td class="r">-10%</td></tr>
+                <tr><td>Segment A</td><td>$12,308</td><td>$11,361</td><td class="r">-8%</td><td class="r">-11%</td><td class="r">-$12,814</td><td class="r">-7%</td></tr>
+                <tr><td>Segment B</td><td>$2,194</td><td>$1,824</td><td class="r" style="background:#fde8e8;">-17%</td><td class="r">-23%</td><td class="r">-$8,763</td><td class="r">-12%</td></tr>
+                <tr><td>Segment C</td><td>$1,265</td><td>$1,117</td><td class="r">-12%</td><td class="r">-17%</td><td class="r">-$4,079</td><td class="r">-11%</td></tr>
+                <tr><td>Segment D</td><td>$999</td><td>$1,090</td><td class="g" style="background:#f0faf0;">+9%</td><td class="g">+3%</td><td class="o">-$322</td><td class="r">-11%</td></tr>
+                <tr><td>Segment E</td><td>$1,596</td><td>$1,646</td><td class="g">+3%</td><td class="r">-14%</td><td class="r">-$4,208</td><td class="r">-19%</td></tr>
+                <tr><td>Segment F</td><td>$78</td><td>$143</td><td class="g" style="background:#f0faf0;">+84%</td><td class="g">+81%</td><td class="g">+$1,295</td><td class="r">-13%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>Finance reporting lead time cut by <strong>80%</strong> · Became the <strong>single source of truth</strong> for weekly Finance &amp; Operations WBR reviews</p></div>
+</div>
+
+<!-- 1D PA Self-Serve -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Product Availability (PA) — Self-Serve Analytics</h3><p>Replaced manual weekly PA reports. 15+ filters across region, category, vendor, and segment. DeepDive tab surfaces highest-impact SKUs ranked by unavailability weight.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Inventory Version</strong><span>Daily sellable inventory snapshot — main source for availability flags</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product List History</strong><span>Day-level SKU availability by sales org — defines available vs OOS</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product Warehouse</strong><span>SKU status, core flag, vendor, and purchase method per FC</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Airflow Snapshots</strong><span>Daily ETL pipeline — snapshot tables refreshed every morning</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">LOD Expressions</span><span class="tag">Unavail. Weight</span><span class="tag">7-day MA</span><span class="tag">15+ Filters</span></div>
+    </div>
+    <div style="padding:0;">
+      <!-- PA filter bar matches actual Tableau dashboard screenshot exactly -->
+      <div class="fb" style="flex-direction:column;align-items:flex-start;gap:6px;padding:10px 16px;">
+        <!-- Row 1 -->
+        <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;">
+          <span class="fb-label">Row 1</span>
+          <span class="fchip" style="min-width:130px;">Time Unit <span class="fc-val" style="margin-left:4px;">03/17/2024 → 03/16/2026</span><span class="arrow">▾</span></span>
+          <span class="fchip">Slice By <span class="fc-val">All</span><span class="arrow">▾</span></span>
+          <span class="fchip">sales_region_title <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Parent Category <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Category <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">ethnicity_user <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="param">Color By <span class="pv">■</span></span>
+        </div>
+        <!-- Row 2 -->
+        <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;">
+          <span class="fb-label">Row 2</span>
+          <span class="fchip">primary_vendor_title <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Color By <span class="fc-val">All</span><span class="arrow">▾</span></span>
+          <span class="fchip">sales_org <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Sub Category <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">SKU Owner <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Division <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+        </div>
+        <!-- Row 3 -->
+        <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;">
+          <span class="fb-label">Row 3</span>
+          <span class="fchip">Product Ethnicity <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Product Status <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Purchase Method <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Direct Import Flag <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Inventory Title <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Storage Type <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+        </div>
+        <!-- Right-side filters from PA screenshot -->
+        <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;">
+          <span class="fb-label">Right Panel</span>
+          <span class="fchip">Buyer Tier Level <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">tier <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Local Buyer <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Local PS <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">KD Flag <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">hero_sku_flag <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">core_flag (snapshot) <span class="fc-val">(All)</span><span class="arrow">▾</span></span>
+          <span class="fchip">dnr_reason <span class="fc-val">(Multiple)</span><span class="arrow">▾</span></span>
+          <span class="fchip">Product ID <span class="fc-val">—</span></span>
+          <span class="param">Show Me <span class="pv">Raw</span></span>
+          <span class="param">Time Unit By <span class="pv">Day</span></span>
+        </div>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv g">92.4%</div><div class="kl">Overall PA</div><div class="kd u">↑ +20% vs baseline</div></div>
+          <div class="kp"><div class="kv o">9.51%</div><div class="kl">UnAval Weight</div><div class="kd d">Weighted OOS impact</div></div>
+          <div class="kp"><div class="kv g">90.49%</div><div class="kl">Aval% (Smooth)</div><div class="kd">7-day moving avg</div></div>
+          <div class="kp"><div class="kv b">4,812</div><div class="kl">SKU Count</div><div class="kd">Live active</div></div>
+        </div>
+
+        <div class="pg pg12">
+          <!-- Smoothed PA trend -->
+          <div class="pn">
+            <div class="ph">PA % Trend — Raw vs 7-Day Smoothed <span>Parameter: toggle raw/smooth</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:85px;" viewBox="0 0 320 85" preserveAspectRatio="none">
+                <defs><linearGradient id="pag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b5f8c" stop-opacity=".2"/><stop offset="100%" stop-color="#2b5f8c" stop-opacity="0"/></linearGradient></defs>
+                <!-- raw (jagged) -->
+                <path d="M0,55 L26,48 L53,60 L80,44 L106,52 L133,38 L160,46 L186,34 L213,42 L240,28 L266,36 L293,22 L320,28" fill="none" stroke="#c8d8e8" stroke-width="1.5"/>
+                <!-- smooth -->
+                <path d="M0,54 L26,50 L53,47 L80,44 L106,41 L133,38 L160,35 L186,32 L213,30 L240,27 L266,24 L293,21 L320,18" fill="none" stroke="#2b5f8c" stroke-width="2.5"/>
+                <path d="M0,54 L26,50 L53,47 L80,44 L106,41 L133,38 L160,35 L186,32 L213,30 L240,27 L266,24 L293,21 L320,18 L320,85 L0,85Z" fill="url(#pag)"/>
+                <line x1="0" y1="30" x2="320" y2="30" stroke="#ef5350" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="3" y="27" font-size="7.5" fill="#ef5350" font-family="monospace">Target 93%</text>
+                <text x="3" y="80" font-size="7.5" fill="#c8d8e8" font-family="monospace">── Raw</text>
+                <text x="50" y="80" font-size="7.5" fill="#2b5f8c" font-family="monospace">── Smoothed</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-top:2px;"><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+            </div>
+          </div>
+          <!-- Division PA grouped bar -->
+          <div class="pn">
+            <div class="ph">PA% by Division <span>Color by SKU tier</span></div>
+            <div class="pb">
+              <div class="dbr"><div class="dlr"><span>Dry Grocery</span><span class="g">93.2%</span></div><div class="dbt"><div class="dbf" style="width:93%;background:#66bb6a;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Frozen</span><span class="g">95.6%</span></div><div class="dbt"><div class="dbf" style="width:95%;background:#66bb6a;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Dairy &amp; Deli</span><span class="o">87.9%</span></div><div class="dbt"><div class="dbf" style="width:88%;background:#ffa726;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Produce</span><span class="r">79.4%</span></div><div class="dbt"><div class="dbf" style="width:79%;background:#ef5350;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Protein</span><span class="g">91.2%</span></div><div class="dbt"><div class="dbf" style="width:91%;background:#66bb6a;"></div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pn" style="margin-top:0;">
+          <div class="ph">DeepDive — Top SKUs by Unavailability Weight <span>Sorted by UnAval Wt ↓ | Filter: Core SKUs only</span></div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>SKU ID</th><th>Product</th><th>Facility</th><th>UnAval Wt</th><th>OOS Days</th><th>Division</th><th>Vendor</th><th>Purchase Method</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>SKU-22075</td><td>Tofu Block 14oz</td><td>FC-West-1</td><td class="r">2.41%</td><td class="r">18</td><td>Produce</td><td>Vendor X</td><td>Local Supply</td><td><span class="bbd">Review</span></td></tr>
+                <tr><td>SKU-40128</td><td>Rice Cake Pack</td><td>FC-East-1</td><td class="r">1.87%</td><td class="r">14</td><td>Dry Grocery</td><td>Vendor Y</td><td>Local Supply</td><td><span class="bbd">Review</span></td></tr>
+                <tr><td>SKU-71231</td><td>Jasmine Rice 5lb</td><td>FC-East-2</td><td class="o">1.12%</td><td class="o">9</td><td>Dry Grocery</td><td>Vendor Z</td><td>DC Supply</td><td><span class="bwn">Monitor</span></td></tr>
+                <tr><td>SKU-98544</td><td>Fish Sauce 700ml</td><td>FC-West-1</td><td class="o">0.88%</td><td class="o">7</td><td>Dry Grocery</td><td>Vendor X</td><td>Local Supply</td><td><span class="bok">Stable</span></td></tr>
+                <tr><td>SKU-2365</td><td>Dim Sum Shrimp</td><td>FC-South-2</td><td class="g">0.54%</td><td class="g">4</td><td>Frozen</td><td>Vendor A</td><td>Direct Import</td><td><span class="bok">Stable</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>Eliminated <strong>~30% of ad-hoc analytics requests</strong> · Teams self-sufficient within 2 weeks · PA improved by <strong>20%</strong></p></div>
+</div>
+
+<!-- 1E Capacity & Inventory Health — DOH, oh_inv, avg daily sales, inv turn, SKU count, weighted instock% -->
+<div class="card" id="invhealth">
+  <div class="ch">
+    <div><h3>Capacity &amp; Inventory Health — DOH, Inventory Turn &amp; Weighted Instock%</h3><p>Tracks SKU capacity utilization, days on hand, average daily sales, inventory turn, and weighted instock% by fulfillment center and division. Supports Operations and Finance planning with forward-looking capacity signals. Colors sliced by storage type (F=Frozen, N=Ambient, R=Refrigerated).</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Inventory Version (Daily Snapshot)</strong><span>On-hand qty and COGS per SKU × FC × day — source for oh_inv and DOH</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Order Product Metrics</strong><span>Daily sales units and revenue used for avg daily sales and inventory turn calculation</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>SKU Capacity Daily</strong><span>Max and current SKU count + volume caps per FC and storage type</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Product Warehouse</strong><span>Core flag, tier, division, department — drives segmentation</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Calendar Dimension</strong><span>52-week rolling spine joining inventory to weekly snapshots</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">GREATEST(qty,0)</span><span class="tag">Inv Turn = Sales/OH</span><span class="tag">Weighted Instock</span><span class="tag">SKU Cap %</span><span class="tag">Color by Slicer</span></div>
+    </div>
+    <div style="padding:0;">
+      <!-- Filter bar -->
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Facility <span class="fc-val">LA</span><span class="arrow">▾</span></span>
+        <span class="fchip">Storage Type <span class="fc-val">F / N / R</span><span class="arrow">▾</span></span>
+        <span class="fchip">Division <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Date Range <span class="fc-val">Last 52 Wks</span><span class="arrow">▾</span></span>
+        <span class="fchip">Core SKU <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Tier <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">Color by Slicer <span class="pv">Storage Type</span></span>
+      </div>
+      <div class="vz">
+
+        <!-- CAPACITY SUMMARY TABLE — mirrors screenshot exactly -->
+        <div class="vz-lbl">Capacity Summary — SKU Cap &amp; Volume Usage by Storage Type</div>
+        <div class="pn" style="margin-bottom:14px;">
+          <div class="ph" style="background:var(--ink);color:rgba(255,255,255,.8);">Capacity and Day of Inventory On Hand — LA <span style="color:rgba(255,255,255,.5);">SKU Cap Usage · Volume Usage · Next SKU Cap</span></div>
+          <div class="pb" style="padding:0;overflow-x:auto;">
+            <table class="t" style="font-size:12px;">
+              <thead>
+                <tr style="background:var(--tagbg);">
+                  <th>FC</th><th>Type</th>
+                  <th>Cur SKU Count</th><th>Max SKU Cap</th>
+                  <th style="background:#fde8e8;">SKU Cap Usage</th>
+                  <th>Total Product Volume</th><th>Max Volume (-20% buffer)</th>
+                  <th style="background:#fde8e8;">Volume Usage</th>
+                  <th>Next SKU Cap</th><th>Timeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3" style="font-weight:700;vertical-align:middle;background:#f9f9f9;">LA</td>
+                  <td style="color:#2b5f8c;font-weight:700;">F</td>
+                  <td>2,408</td><td>2,455</td>
+                  <td class="r" style="background:#fde8e8;font-weight:700;">98%</td>
+                  <td>61,000</td><td>101,558</td>
+                  <td class="o" style="background:#fff3e0;font-weight:700;">60%</td>
+                  <td class="n">—</td><td class="n">—</td>
+                </tr>
+                <tr>
+                  <td style="color:#ffa726;font-weight:700;">N</td>
+                  <td>9,747</td><td>11,000</td>
+                  <td class="o" style="background:#fff3e0;font-weight:700;">89%</td>
+                  <td>127,583</td><td>256,486</td>
+                  <td class="n">50%</td>
+                  <td class="n">—</td><td class="n">—</td>
+                </tr>
+                <tr>
+                  <td style="color:#ef5350;font-weight:700;">R</td>
+                  <td>1,139</td><td>1,785</td>
+                  <td class="g" style="background:#e8f5e9;font-weight:700;">64%</td>
+                  <td>29,455</td><td>89,738</td>
+                  <td class="g" style="background:#e8f5e9;">33%</td>
+                  <td class="n">—</td><td class="n">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 6-PANEL GRID: oh_inv, avg daily sales, inv turn, SKU count, DOH, weighted instock -->
+        <div class="vz-lbl">Dashboard Panels — Time Series by Storage Type (Color = F · N · R)</div>
+        <div class="pg pg2" style="margin-bottom:12px;">
+
+          <!-- oh_inv -->
+          <div class="pn">
+            <div class="ph">oh_inv — On-Hand Inventory ($) <span>Weekly · Color by Storage Type</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <!-- F=blue (frozen) - starts high, dips, recovers -->
+                <path d="M0,18 L23,20 L46,25 L70,22 L93,26 L116,30 L140,28 L163,24 L186,20 L210,18 L233,22 L256,19 L280,16" fill="none" stroke="#2b5f8c" stroke-width="2"/>
+                <!-- N=orange (ambient) - higher line -->
+                <path d="M0,12 L23,14 L46,16 L70,13 L93,15 L116,18 L140,16 L163,13 L186,11 L210,14 L233,12 L256,10 L280,12" fill="none" stroke="#ffa726" stroke-width="2"/>
+                <!-- R=red (refrig) - lowest -->
+                <path d="M0,52 L23,50 L46,55 L70,48 L93,52 L116,58 L140,54 L163,50 L186,46 L210,50 L233,48 L256,52 L280,50" fill="none" stroke="#ef5350" stroke-width="2"/>
+                <text x="3" y="76" font-size="7" fill="#2b5f8c" font-family="monospace">── F</text>
+                <text x="25" y="76" font-size="7" fill="#ffa726" font-family="monospace">── N</text>
+                <text x="48" y="76" font-size="7" fill="#ef5350" font-family="monospace">── R</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+              <div style="display:flex;gap:12px;font-size:10.5px;margin-top:6px;font-family:monospace;">
+                <span style="color:#2b5f8c;">F: $1.42M</span>
+                <span style="color:#ffa726;">N: $1.72M</span>
+                <span style="color:#ef5350;">R: $498K</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avg Daily Sales -->
+          <div class="pn">
+            <div class="ph">Avg Daily Sales (Units) <span>Weekly trend · Color by Storage Type</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <path d="M0,42 L23,38 L46,35 L70,32 L93,28 L116,25 L140,28 L163,24 L186,22 L210,26 L233,22 L256,20 L280,18" fill="none" stroke="#2b5f8c" stroke-width="2"/>
+                <path d="M0,22 L23,20 L46,18 L70,16 L93,14 L116,12 L140,14 L163,11 L186,10 L210,13 L233,11 L256,9 L280,10" fill="none" stroke="#ffa726" stroke-width="2"/>
+                <path d="M0,58 L23,55 L46,60 L70,54 L93,58 L116,62 L140,58 L163,54 L186,50 L210,55 L233,52 L256,58 L280,54" fill="none" stroke="#ef5350" stroke-width="2"/>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+              <div style="display:flex;gap:12px;font-size:10.5px;margin-top:6px;font-family:monospace;">
+                <span style="color:#2b5f8c;">F: 62.4 u/day</span>
+                <span style="color:#ffa726;">N: 74.2 u/day</span>
+                <span style="color:#ef5350;">R: 25.6 u/day</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory Turn -->
+          <div class="pn">
+            <div class="ph">Inventory Turn <span>Sales ÷ On-Hand · Color by Storage Type</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <path d="M0,55 L23,50 L46,44 L70,48 L93,42 L116,38 L140,42 L163,36 L186,32 L210,36 L233,30 L256,26 L280,24" fill="none" stroke="#2b5f8c" stroke-width="2"/>
+                <path d="M0,45 L23,40 L46,36 L70,40 L93,34 L116,30 L140,34 L163,28 L186,24 L210,28 L233,22 L256,18 L280,20" fill="none" stroke="#ffa726" stroke-width="2"/>
+                <path d="M0,65 L23,62 L46,66 L70,60 L93,64 L116,68 L140,62 L163,58 L186,55 L210,60 L233,56 L256,62 L280,58" fill="none" stroke="#ef5350" stroke-width="2"/>
+                <text x="3" y="76" font-size="7" fill="var(--muted)" font-family="monospace">Higher = faster moving stock</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+              <div style="display:flex;gap:12px;font-size:10.5px;margin-top:6px;font-family:monospace;">
+                <span style="color:#2b5f8c;">F: 14.2x</span>
+                <span style="color:#ffa726;">N: 16.8x</span>
+                <span style="color:#ef5350;">R: 9.4x</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SKU Count -->
+          <div class="pn">
+            <div class="ph">SKU Count <span>Distinct active SKUs · Color by Storage Type</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <path d="M0,40 L23,38 L46,36 L70,38 L93,36 L116,34 L140,36 L163,34 L186,32 L210,34 L233,32 L256,30 L280,32" fill="none" stroke="#2b5f8c" stroke-width="2" stroke-dasharray="4,2"/>
+                <path d="M0,18 L23,17 L46,16 L70,18 L93,16 L116,15 L140,17 L163,15 L186,14 L210,16 L233,14 L256,13 L280,14" fill="none" stroke="#ffa726" stroke-width="2" stroke-dasharray="4,2"/>
+                <path d="M0,62 L23,60 L46,62 L70,60 L93,62 L116,64 L140,62 L163,60 L186,58 L210,62 L233,60 L256,58 L280,60" fill="none" stroke="#ef5350" stroke-width="2" stroke-dasharray="4,2"/>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+              <div style="display:flex;gap:12px;font-size:10.5px;margin-top:6px;font-family:monospace;">
+                <span style="color:#2b5f8c;">F: 2,408</span>
+                <span style="color:#ffa726;">N: 9,747</span>
+                <span style="color:#ef5350;">R: 1,139</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOH -->
+          <div class="pn">
+            <div class="ph">DOH — Days on Hand <span>Weekly trend · Color by Storage Type</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <path d="M0,35 L23,38 L46,42 L70,36 L93,40 L116,44 L140,38 L163,34 L186,30 L210,36 L233,32 L256,28 L280,30" fill="none" stroke="#2b5f8c" stroke-width="2"/>
+                <path d="M0,25 L23,28 L46,32 L70,26 L93,30 L116,34 L140,28 L163,24 L186,20 L210,26 L233,22 L256,18 L280,20" fill="none" stroke="#ffa726" stroke-width="2"/>
+                <path d="M0,50 L23,54 L46,58 L70,52 L93,56 L116,60 L140,54 L163,50 L186,46 L210,52 L233,48 L256,44 L280,46" fill="none" stroke="#ef5350" stroke-width="2"/>
+                <line x1="0" y1="42" x2="280" y2="42" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="3" y="40" font-size="6.5" fill="#aaa" font-family="monospace">14d target</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Jun</span><span>Aug</span><span>Oct</span><span>Dec</span><span>Feb</span></div>
+              <div style="display:flex;gap:12px;font-size:10.5px;margin-top:6px;font-family:monospace;">
+                <span style="color:#2b5f8c;">F: 29.1d</span>
+                <span style="color:#ffa726;">N: 22.4d</span>
+                <span style="color:#ef5350;">R: 40.5d</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weighted Instock % -->
+          <div class="pn">
+            <div class="ph">Weighted Instock % <span>Weekly · Overall + DeepDive by Division</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:80px;" viewBox="0 0 280 80" preserveAspectRatio="none">
+                <defs><linearGradient id="wig" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#66bb6a" stop-opacity=".2"/><stop offset="100%" stop-color="#66bb6a" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0,28 L23,25 L46,22 L70,26 L93,20 L116,16 L140,20 L163,16 L186,13 L210,17 L233,14 L256,11 L280,12" fill="none" stroke="#66bb6a" stroke-width="2.5"/>
+                <path d="M0,28 L23,25 L46,22 L70,26 L93,20 L116,16 L140,20 L163,16 L186,13 L210,17 L233,14 L256,11 L280,12 L280,80 L0,80Z" fill="url(#wig)"/>
+                <line x1="0" y1="18" x2="280" y2="18" stroke="#ffa726" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="3" y="15" font-size="7" fill="#ffa726" font-family="monospace">Target 93%</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Apr</span><span>Aug</span><span>Dec</span><span>Feb</span></div>
+              <!-- DeepDive table from screenshot -->
+              <div style="margin-top:8px;font-size:10.5px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;padding:4px 6px;background:var(--tagbg);border-radius:4px;">
+                  <span style="font-weight:600;">Overall</span>
+                  <span>UnAval Wt <strong class="o">9.51%</strong>&nbsp;|&nbsp;Aval% <strong class="g">90.49%</strong></span>
+                </div>
+                <table class="t" style="font-size:10.5px;">
+                  <thead><tr><th>DeepDive By</th><th>UnAval Wt</th><th>Aval%</th><th>Unavail SKUs</th></tr></thead>
+                  <tbody>
+                    <tr><td>Dry Grocery</td><td class="o">9.49%</td><td class="g">90.51%</td><td>1,432</td></tr>
+                    <tr><td>GM &amp; HBC</td><td class="r">12.10%</td><td class="o">87.90%</td><td>741</td></tr>
+                    <tr><td>Frozen</td><td class="o">10.40%</td><td class="g">89.60%</td><td>359</td></tr>
+                    <tr><td>Dairy/Deli</td><td class="r">11.90%</td><td class="o">88.10%</td><td>160</td></tr>
+                    <tr><td>Protein</td><td class="g">5.52%</td><td class="g">94.48%</td><td>91</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>Holiday peak forecasting accuracy improved <strong>~15–20%</strong> · Enabled proactive FC capacity planning · Frozen SKU cap at <strong>98%</strong> flagged 6 weeks before peak — prevented stockouts</p></div>
+</div>
+
+<!-- ══ 02 · FILL RATE ══ -->
+<div class="sh" id="fillrate">
+  <div class="sn">02</div>
+  <div class="st"><h2>Vendor Fill Rate &amp; On-Time Delivery Scorecard</h2><p>Supply chain analytics · Vendor performance measurement &amp; accountability</p></div>
+</div>
+
+<div class="card">
+  <div class="ch">
+    <div><h3>Fill Rate / On-Time — Weighted Vendor Scorecard</h3><p>Measures vendor delivery performance across fill rate, on-time %, and order acknowledgement. Feeds directly into vendor accountability conversations and sourcing prioritization with the Buying team.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>PO Product Lines</strong><span>Ordered vs received quantities per PO — primary fill rate source</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>PO Line Snapshot</strong><span>Version history of purchase orders — anchors original order timestamp</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Vendor Portal Proposals</strong><span>Vendor acknowledgements and replies to POs via supplier portal</span></div></li>
+        <li><span class="dsi ev">📦</span><div class="ds-d"><strong>PO Receipt Issues</strong><span>Ticket types for short ships, rejections, and receipt problems per PO</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Delivery Calendar Config</strong><span>Vendor lead times and estimated delivery dates by FC</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">ROW_NUMBER</span><span class="tag">COGS-Weighted</span><span class="tag">CTE Pipeline</span></div>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Est. Delivery Wk <span class="fc-val">Last 4 Wks</span><span class="arrow">▾</span></span>
+        <span class="fchip">Facility <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Division <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Vendor <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">PO Status <span class="fc-val">Closed</span><span class="arrow">▾</span></span>
+        <span class="param">Color by <span class="pv">Fill Rate</span></span>
+        <span class="param">Metric <span class="pv">$ Weighted</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv g">94.8%</div><div class="kl">Avg Fill Rate</div><div class="kd">4 weeks · all vendors</div></div>
+          <div class="kp"><div class="kv o">87.2%</div><div class="kl">On-Time %</div><div class="kd d">↓ -3pp vs target</div></div>
+          <div class="kp"><div class="kv b">131</div><div class="kl">POs Tracked</div><div class="kd">Dry · Frozen · RFG</div></div>
+          <div class="kp"><div class="kv r">17</div><div class="kl">Short Ships</div><div class="kd d">Requires review</div></div>
+        </div>
+
+        <div class="pg pg2">
+          <!-- Scatter: fill rate vs on-time per vendor -->
+          <div class="pn">
+            <div class="ph">Vendor Performance Scatter <span>Fill Rate % vs On-Time % · Size = COGS</span></div>
+            <div class="pb">
+              <div class="scatter-wrap">
+                <!-- quadrant lines -->
+                <div style="position:absolute;left:50%;top:0;width:1px;height:100%;background:var(--rule);"></div>
+                <div style="position:absolute;top:50%;left:0;width:100%;height:1px;background:var(--rule);"></div>
+                <!-- dots: x=on-time%, y=fill rate% (inverted) -->
+                <div class="dot" style="width:18px;height:18px;background:#2e7d32;left:82%;top:5%;" title="Vendor A · FR 98% · OT 95%"></div>
+                <div class="dot" style="width:24px;height:24px;background:#2e7d32;left:74%;top:8%;" title="Vendor D · FR 97% · OT 91%"></div>
+                <div class="dot" style="width:14px;height:14px;background:#ffa726;left:62%;top:28%;" title="Vendor E · FR 91% · OT 84%"></div>
+                <div class="dot" style="width:16px;height:16px;background:#ffa726;left:44%;top:32%;" title="Vendor B · FR 88% · OT 79%"></div>
+                <div class="dot" style="width:20px;height:20px;background:#ef5350;left:28%;top:55%;" title="Vendor C · FR 71% · OT 60%"></div>
+                <div class="dot" style="width:12px;height:12px;background:#ef5350;left:18%;top:62%;" title="Vendor F · FR 68% · OT 55%"></div>
+                <div style="position:absolute;top:2px;left:54%;font-size:8px;color:var(--muted);">High OT →</div>
+                <div style="position:absolute;bottom:2px;left:4px;font-size:8px;color:var(--muted);">↓ Low Fill Rate</div>
+              </div>
+              <div style="display:flex;gap:10px;margin-top:4px;">
+                <div class="pie-item"><div class="pie-dot" style="background:#2e7d32;"></div><span style="font-size:10px;">Strong</span></div>
+                <div class="pie-item"><div class="pie-dot" style="background:#ffa726;"></div><span style="font-size:10px;">Review</span></div>
+                <div class="pie-item"><div class="pie-dot" style="background:#ef5350;"></div><span style="font-size:10px;">At Risk</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fill rate trend line -->
+          <div class="pn">
+            <div class="ph">Fill Rate vs On-Time Trend <span>8 Weeks</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:75px;" viewBox="0 0 260 75" preserveAspectRatio="none">
+                <path d="M0,35 L37,28 L74,21 L111,33 L148,24 L185,16 L222,19 L259,11" fill="none" stroke="#66bb6a" stroke-width="2.5"/>
+                <path d="M0,50 L37,55 L74,62 L111,46 L148,58 L185,65 L222,56 L259,68" fill="none" stroke="#ef5350" stroke-width="2" stroke-dasharray="5,3"/>
+                <line x1="0" y1="16" x2="259" y2="16" stroke="#42a5f5" stroke-width="1" stroke-dasharray="3,3" opacity=".6"/>
+                <text x="3" y="13" font-size="7.5" fill="#42a5f5" font-family="monospace">Target 95%</text>
+                <text x="3" y="72" font-size="7.5" fill="#66bb6a" font-family="monospace">── Fill Rate</text>
+                <text x="75" y="72" font-size="7.5" fill="#ef5350" font-family="monospace">- - On-Time%</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-top:2px;"><span>Wk1</span><span>Wk4</span><span>Wk8</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vendor scorecard table -->
+        <div class="pn" style="margin-top:0;">
+          <div class="ph">Vendor Scorecard · Last 4 Weeks <span>Sorted by Fill Rate ↓ | Weighted by COGS</span></div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>Vendor</th><th>POs</th><th>Fill Rate</th><th>On-Time%</th><th>Reply</th><th>Short Ships</th><th>COGS Wt</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Vendor A</td><td class="n">42</td><td class="g">98.2%</td><td class="g">95.4%</td><td class="g">✓ Yes</td><td class="g">1</td><td>$142K</td><td><span class="bok">Strong</span></td></tr>
+                <tr><td>Vendor D</td><td class="n">61</td><td class="g">96.8%</td><td class="g">91.2%</td><td class="g">✓ Yes</td><td class="g">2</td><td>$210K</td><td><span class="bok">Strong</span></td></tr>
+                <tr><td>Vendor B</td><td class="n">28</td><td class="o">87.5%</td><td class="o">79.0%</td><td class="o">Partial</td><td class="o">5</td><td>$88K</td><td><span class="bwn">Review</span></td></tr>
+                <tr><td>Vendor C</td><td class="n">15</td><td class="r">71.3%</td><td class="r">60.0%</td><td class="r">✗ No</td><td class="r">9</td><td>$54K</td><td><span class="bbd">At Risk</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- PO PURCHASE PLAN / 3-MONTH FORECAST -->
+        <div style="margin:0 20px 20px;">
+          <div class="ph" style="background:var(--a2);color:white;border-radius:7px 7px 0 0;margin-bottom:0;">📅 &nbsp;Vendor Purchase Plan — 3-Month Forward Forecast &nbsp;<span style="color:rgba(255,255,255,.6);font-size:9px;">Based on demand forecast × lead time × safety stock logic</span></div>
+          <div style="background:white;border:1px solid var(--rule);border-top:none;border-radius:0 0 7px 7px;padding:14px;">
+
+            <!-- Filter bar for forecast -->
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;padding:8px;background:#f5f8fc;border-radius:5px;align-items:center;">
+              <span class="fb-label">Forecast Filters</span>
+              <span class="fchip">Vendor <span class="fc-val">All</span><span class="arrow">▾</span></span>
+              <span class="fchip">Facility <span class="fc-val">All</span><span class="arrow">▾</span></span>
+              <span class="fchip">Division <span class="fc-val">All</span><span class="arrow">▾</span></span>
+              <span class="fchip">Storage Type <span class="fc-val">Dry</span><span class="arrow">▾</span></span>
+              <span class="fchip">Horizon <span class="fc-val">3 Months</span><span class="arrow">▾</span></span>
+              <span class="param">Group by <span class="pv">Week</span></span>
+              <span class="param">View <span class="pv">Units + $</span></span>
+            </div>
+
+            <!-- KPIs -->
+            <div class="ks" style="margin-bottom:14px;">
+              <div class="kp"><div class="kv b">$2.14M</div><div class="kl">Forecasted PO Value</div><div class="kd">Next 3 months</div></div>
+              <div class="kp"><div class="kv g">412</div><div class="kl">Planned POs</div><div class="kd">Across all vendors</div></div>
+              <div class="kp"><div class="kv o">1,842</div><div class="kl">Est. Pallets</div><div class="kd">Total inbound volume</div></div>
+              <div class="kp"><div class="kv g">94%</div><div class="kl">Coverage Rate</div><div class="kd u">vs demand forecast</div></div>
+            </div>
+
+            <div class="pg pg2" style="margin-bottom:12px;">
+              <!-- Stacked bar: planned PO value by week (next 12 weeks) -->
+              <div class="pn">
+                <div class="ph">Weekly Planned PO Volume ($K) — Next 12 Weeks <span>Stacked by Vendor Grade</span></div>
+                <div class="pb">
+                  <div style="display:flex;align-items:flex-end;gap:4px;height:80px;padding-bottom:16px;position:relative;">
+                    <div style="position:absolute;bottom:16px;left:0;right:0;height:1px;background:var(--rule);"></div>
+                    <!-- 12 bars: stacked (strong=green, review=orange, risk=red) -->
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:6px;background:#ef5350;"></div><div style="height:10px;background:#ffa726;"></div><div style="height:34px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:5px;background:#ef5350;"></div><div style="height:12px;background:#ffa726;"></div><div style="height:38px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:7px;background:#ef5350;"></div><div style="height:11px;background:#ffa726;"></div><div style="height:42px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:4px;background:#ef5350;"></div><div style="height:9px;background:#ffa726;"></div><div style="height:36px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:6px;background:#ef5350;"></div><div style="height:13px;background:#ffa726;"></div><div style="height:44px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:5px;background:#ef5350;"></div><div style="height:10px;background:#ffa726;"></div><div style="height:48px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:8px;background:#ef5350;"></div><div style="height:14px;background:#ffa726;"></div><div style="height:40px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:5px;background:#ef5350;"></div><div style="height:11px;background:#ffa726;"></div><div style="height:52px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:6px;background:#ef5350;"></div><div style="height:12px;background:#ffa726;"></div><div style="height:46px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:4px;background:#ef5350;"></div><div style="height:8px;background:#ffa726;"></div><div style="height:38px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:5px;background:#ef5350;"></div><div style="height:10px;background:#ffa726;"></div><div style="height:42px;background:#66bb6a;"></div>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:0;border-radius:2px 2px 0 0;overflow:hidden;">
+                      <div style="height:6px;background:#ef5350;"></div><div style="height:11px;background:#ffa726;"></div><div style="height:44px;background:#66bb6a;"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Wk1</span><span>Wk2</span><span>Wk3</span><span>Wk4</span><span>Wk5</span><span>Wk6</span><span>Wk7</span><span>Wk8</span><span>Wk9</span><span>W10</span><span>W11</span><span>W12</span></div>
+                  <div style="display:flex;gap:10px;margin-top:6px;">
+                    <div class="pie-item"><div class="pie-dot" style="background:#66bb6a;"></div><span style="font-size:10px;">Strong Vendors</span></div>
+                    <div class="pie-item"><div class="pie-dot" style="background:#ffa726;"></div><span style="font-size:10px;">Review</span></div>
+                    <div class="pie-item"><div class="pie-dot" style="background:#ef5350;"></div><span style="font-size:10px;">At Risk</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Forecast vs demand line chart -->
+              <div class="pn">
+                <div class="ph">Planned PO Units vs Demand Forecast <span>Coverage gap highlighted</span></div>
+                <div class="pb">
+                  <svg class="spk" style="height:80px;" viewBox="0 0 260 80" preserveAspectRatio="none">
+                    <defs><linearGradient id="gapg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ef5350" stop-opacity=".15"/><stop offset="100%" stop-color="#ef5350" stop-opacity="0"/></linearGradient></defs>
+                    <!-- Demand forecast (higher, dashed) -->
+                    <path d="M0,28 L22,25 L44,22 L66,20 L88,18 L110,15 L132,18 L154,14 L176,12 L198,16 L220,13 L242,10 L260,12" fill="none" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="5,3"/>
+                    <!-- Planned PO units (solid, slightly below) -->
+                    <path d="M0,34 L22,30 L44,28 L66,26 L88,24 L110,21 L132,24 L154,20 L176,18 L198,22 L220,19 L242,16 L260,18" fill="none" stroke="#2b5f8c" stroke-width="2"/>
+                    <!-- Gap fill -->
+                    <path d="M0,28 L22,25 L44,22 L66,20 L88,18 L110,15 L132,18 L154,14 L176,12 L198,16 L220,13 L242,10 L260,12 L260,18 L242,16 L220,19 L198,22 L176,18 L154,20 L132,24 L110,21 L88,24 L66,26 L44,28 L22,30 L0,34Z" fill="url(#gapg)"/>
+                    <!-- Historical actuals (left portion) -->
+                    <path d="M0,38 L22,35 L44,30 L66,28" fill="none" stroke="#66bb6a" stroke-width="2"/>
+                    <line x1="66" y1="0" x2="66" y2="80" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="68" y="8" font-size="7" fill="#aaa" font-family="monospace">Today →</text>
+                    <text x="3" y="74" font-size="7" fill="#2b5f8c" font-family="monospace">── Planned PO</text>
+                    <text x="85" y="74" font-size="7" fill="#ef5350" font-family="monospace">- - Demand Fcst</text>
+                    <text x="3" y="64" font-size="7" fill="#66bb6a" font-family="monospace">── Actuals</text>
+                  </svg>
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);margin-top:2px;"><span>Apr</span><span>May</span><span>Jun</span><span>Jul (Fcst)</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Per-vendor 3-month purchase plan table -->
+            <div class="pn">
+              <div class="ph">3-Month Purchase Plan by Vendor <span>Est. delivery week · PO qty · $ value · Coverage vs demand</span></div>
+              <div class="pb" style="overflow-x:auto;">
+                <table class="t">
+                  <thead>
+                    <tr>
+                      <th>Vendor</th><th>Grade</th><th>Division</th>
+                      <th>Month 1 POs</th><th>Month 1 Units</th><th>Month 1 $K</th>
+                      <th>Month 2 POs</th><th>Month 2 Units</th><th>Month 2 $K</th>
+                      <th>Month 3 POs</th><th>Month 3 Units</th><th>Month 3 $K</th>
+                      <th>Coverage %</th><th>Risk</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Vendor A</td><td><span class="bok">A</span></td><td>Dry Grocery</td>
+                      <td class="n">14</td><td>3,240</td><td class="g">$188K</td>
+                      <td class="n">12</td><td>2,880</td><td class="g">$162K</td>
+                      <td class="n">13</td><td>3,120</td><td class="g">$175K</td>
+                      <td class="g">97%</td><td><span class="bok">Covered</span></td>
+                    </tr>
+                    <tr>
+                      <td>Vendor D</td><td><span class="bok">A-</span></td><td>Frozen</td>
+                      <td class="n">18</td><td>4,100</td><td class="g">$241K</td>
+                      <td class="n">16</td><td>3,600</td><td class="g">$212K</td>
+                      <td class="n">17</td><td>3,820</td><td class="g">$225K</td>
+                      <td class="g">95%</td><td><span class="bok">Covered</span></td>
+                    </tr>
+                    <tr>
+                      <td>Vendor B</td><td><span class="bwn">C</span></td><td>Dry Grocery</td>
+                      <td class="n">8</td><td>1,680</td><td class="o">$94K</td>
+                      <td class="n">7</td><td>1,420</td><td class="o">$80K</td>
+                      <td class="n">8</td><td>1,540</td><td class="o">$87K</td>
+                      <td class="o">82%</td><td><span class="bwn">Gap Risk</span></td>
+                    </tr>
+                    <tr>
+                      <td>Vendor C</td><td><span class="bbd">F</span></td><td>RFG</td>
+                      <td class="n">4</td><td>620</td><td class="r">$31K</td>
+                      <td class="n">3</td><td>480</td><td class="r">$24K</td>
+                      <td class="n">—</td><td class="r">—</td>
+                      <td class="r">54%</td><td><span class="bbd">Shortage</span></td>
+                    </tr>
+                    <tr style="background:#f5f8fc;">
+                      <td><strong>Total</strong></td><td>—</td><td>—</td>
+                      <td><strong>44</strong></td><td><strong>9,640</strong></td><td class="g"><strong>$554K</strong></td>
+                      <td><strong>38</strong></td><td><strong>8,380</strong></td><td class="g"><strong>$478K</strong></td>
+                      <td><strong>38</strong></td><td><strong>8,480</strong></td><td class="g"><strong>$487K</strong></td>
+                      <td class="g"><strong>87%</strong></td><td>—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>Enabled <strong>data-driven vendor accountability</strong> with Buying team · Purchase plan used by Buying to proactively flag Vendor C shortage risk <strong>6 weeks ahead</strong></p></div>
+</div>
+
+<!-- ══ 03 · IRS REPLENISHMENT ══ -->
+<div class="sh" id="irs">
+  <div class="sn">03</div>
+  <div class="st"><h2>Internal Replenishment System (IRS) — Analytics Layer</h2><p>Collaborated with PMs &amp; Engineering to build the SQL analytics backbone powering a proprietary replenishment tool</p></div>
+</div>
+
+<div class="card">
+  <div class="ch">
+    <div><h3>IRS Network Calculation — Order Recommendation Engine</h3><p>Designed and maintained the SQL data layer feeding the internal replenishment system — translating network-level inventory signals, demand forecasts, and DC delivery schedules into SKU-level order recommendations surfaced to buyers in real time.</p></div>
+    <span class="role-badge r1">Analytics Manager</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>IRS Network Calculation</strong><span>Core engine output — target qty, available qty, DOH, safety stock, and order recommendations per SKU × FC</span></div></li>
+        <li><span class="dsi ev">📦</span><div class="ds-d"><strong>IRS Purchase Order Product</strong><span>Recommended POs with cost, pallets, delivery date, and submission status</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Inventory Version</strong><span>Real-time sellable inventory by SKU and warehouse</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>DC Schedule Details</strong><span>DC→FC delivery lanes, lead times, review days, and order cycle config</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Delivery Calendar Config</strong><span>Vendor-level order frequency, ETA, and lead time per FC</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Inventory Location History</strong><span>Bin-level expiry data feeding into shelf-life logic of the engine</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">Facility ID Norm.</span><span class="tag">Temp Tables</span><span class="tag">Airflow</span><span class="tag">PM Collaboration</span></div>
+    </div>
+    <div style="padding:0;">
+      <!-- IRS filter bar mirrors actual system screenshot -->
+      <div class="fb">
+        <span class="fb-label">IRS Filters</span>
+        <span class="fchip">Facility IDs <span class="fc-val">ex: 25</span><span class="arrow">▾</span></span>
+        <span class="fchip">Vendor IDs <span class="fc-val">ex: 1915</span><span class="arrow">▾</span></span>
+        <span class="fchip">Product IDs <span class="fc-val">ex: 908</span><span class="arrow">▾</span></span>
+        <span class="fchip">Storage Types <span class="fc-val">Dry</span><span class="arrow">▾</span></span>
+        <span class="fchip">Ethnicity <span class="fc-val">ex: Chinese</span><span class="arrow">▾</span></span>
+        <span class="fchip">Submission Status <span class="fc-val">ex: Success</span><span class="arrow">▾</span></span>
+        <span class="fchip">Supply Types <span class="fc-val">Local Supply</span><span class="arrow">▾</span></span>
+        <span class="fchip">Tiers <span class="fc-val">ex: 1</span><span class="arrow">▾</span></span>
+        <span class="param">Filter By <span class="pv">▾</span></span>
+      </div>
+      <div class="vz">
+        <!-- Summary banner mirrors IRS screenshot -->
+        <div style="background:#f5f8fc;border:1px solid var(--rule);border-radius:7px;padding:12px 16px;margin-bottom:14px;font-size:12px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div><span style="color:var(--muted);">Facility: </span><strong>FC-41 (Destination)</strong></div>
+            <div><span style="color:var(--muted);">Vendors: </span><strong>173</strong></div>
+            <div><span style="color:var(--muted);">Primary Replenishment: </span><strong>Vendor</strong></div>
+            <div><span style="color:var(--muted);">Local Supply Cost: </span><strong>$549,978</strong></div>
+            <div><span style="color:var(--muted);">Est. Pallet Count: </span><strong>122.42</strong></div>
+            <div><span style="color:var(--muted);">Applied Overrides: </span><strong>0</strong></div>
+            <div><span style="color:var(--muted);">Submitted: </span><strong>374 / 2,322</strong></div>
+          </div>
+        </div>
+
+        <div class="pg pg2">
+          <!-- DOH health gauge bars -->
+          <div class="pn">
+            <div class="ph">DOH Health by Division <span>Days on Hand · Color = Risk Level</span></div>
+            <div class="pb">
+              <div class="dbr"><div class="dlr"><span>Dry Grocery</span><span class="g">18 days</span></div><div class="dbt"><div class="dbf" style="width:75%;background:#66bb6a;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Frozen</span><span class="g">24 days</span></div><div class="dbt"><div class="dbf" style="width:90%;background:#66bb6a;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Dairy/Deli</span><span class="o">6 days</span></div><div class="dbt"><div class="dbf" style="width:28%;background:#ffa726;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Produce</span><span class="r">3 days</span></div><div class="dbt"><div class="dbf" style="width:14%;background:#ef5350;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Protein</span><span class="g">14 days</span></div><div class="dbt"><div class="dbf" style="width:60%;background:#66bb6a;"></div></div></div>
+              <div class="dbr"><div class="dlr"><span>Bakery</span><span class="g">11 days</span></div><div class="dbt"><div class="dbf" style="width:48%;background:#66bb6a;"></div></div></div>
+            </div>
+          </div>
+
+          <!-- DOH distribution histogram -->
+          <div class="pn">
+            <div class="ph">Order Qty Distribution (Histogram) <span>How many SKUs per order qty bucket</span></div>
+            <div class="pb">
+              <div class="hist">
+                <div class="hb" style="height:20%;background:#66bb6a;"></div>
+                <div class="hb" style="height:48%;background:#66bb6a;"></div>
+                <div class="hb" style="height:75%;background:#42a5f5;"></div>
+                <div class="hb" style="height:85%;background:#42a5f5;"></div>
+                <div class="hb" style="height:60%;background:#ffa726;"></div>
+                <div class="hb" style="height:38%;background:#ffa726;"></div>
+                <div class="hb" style="height:22%;background:#ef5350;"></div>
+                <div class="hb" style="height:12%;background:#ef5350;"></div>
+              </div>
+              <div class="hx"><div class="hxl">0</div><div class="hxl">1-10</div><div class="hxl">11-30</div><div class="hxl">31-60</div><div class="hxl">61-100</div><div class="hxl">101-200</div><div class="hxl">201-500</div><div class="hxl">>500</div></div>
+              <div style="font-size:10px;color:var(--muted);margin-top:4px;">Most orders cluster in 11–60 unit range per calculation run</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products tab: IRS output table — mirrors actual screenshot columns -->
+        <div class="pn" style="margin-top:0;">
+          <div class="ph" style="display:flex;gap:12px;">
+            <span style="color:var(--a2);border-bottom:2px solid var(--a2);padding-bottom:2px;font-weight:700;">Products</span>
+            <span>Replenishments</span>
+          </div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>Product ID</th><th>Storage</th><th>Tier</th><th>Purchase Status</th><th>Assortment Grp</th><th>Target Qty</th><th>Avail Qty</th><th>Sellable</th><th>Order Qty</th><th>Avg WoS</th><th>DOH</th><th>DOH (OOS)</th><th>Est Pallets</th><th>Cost</th><th>FC Override</th></tr></thead>
+              <tbody>
+                <tr><td>111437</td><td>Dry</td><td>99</td><td>live</td><td>NonCore</td><td>234</td><td>180</td><td>180</td><td class="o">60</td><td>9.17</td><td class="g">0</td><td>—</td><td>18</td><td>$56</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>108280</td><td>Dry</td><td>99</td><td>live</td><td>NonCore</td><td>1</td><td>0</td><td>0</td><td class="r">12</td><td>11.15</td><td class="r">—</td><td>—</td><td>—</td><td>$72</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>71231</td><td>Dry</td><td>2</td><td>live</td><td>Core</td><td>203</td><td>168</td><td>132</td><td class="o">36</td><td>3.86</td><td class="o">4</td><td>11</td><td>11</td><td>$76</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>98544</td><td>Dry</td><td>2</td><td>live</td><td>Core</td><td>263</td><td>240</td><td>360</td><td class="o">30</td><td>6.10</td><td class="g">0</td><td>—</td><td>26</td><td>$150</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>92133</td><td>Dry</td><td>99</td><td>live</td><td>NonCore</td><td>85</td><td>104</td><td>24</td><td class="n">0</td><td>2.86</td><td class="r">28</td><td>22</td><td>22</td><td>$0</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>22075</td><td>Dry</td><td>2</td><td>live</td><td>Core</td><td>755</td><td>1,228</td><td>1,332</td><td class="g">0</td><td>5.32</td><td class="g">59</td><td>—</td><td>45</td><td>$0</td><td><span class="bok">✓</span></td></tr>
+                <tr><td>1424</td><td>Dry</td><td>2</td><td>live</td><td>NonCore</td><td>242</td><td>240</td><td>240</td><td class="g">120</td><td>9.96</td><td class="g">0</td><td>—</td><td>45</td><td>$144</td><td><span class="bok">✓</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="padding:8px 12px;font-size:10.5px;color:var(--muted);border-top:1px solid var(--rule);">Page 1 of 412 · 10 per page · 4,120 total SKUs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>Manual analysis effort ↓ <strong>~30%</strong> via Python AI agents · Serves <strong>173 vendors across 9 FCs</strong> in real time · ETL latency ↓ <strong>~25%</strong></p></div>
+</div>
+
+<!-- ══ 04 · FULFILLMENT SCORECARD ══ -->
+<div class="sh" id="wmt">
+  <div class="sn">04</div>
+  <div class="st"><h2>eCommerce Vendor &amp; Fulfillment Scorecard</h2><p>Multi-source ETL (Teradata + MySQL + Hive → BigQuery) · PPO analytics · Vendor scorecard automation</p></div>
+</div>
+
+<div class="card">
+  <div class="ch">
+    <div><h3>Unified Vendor &amp; Fulfillment Performance Scorecard</h3><p>Consolidated store and eCommerce vendor metrics into a governed BigQuery analytics layer. Automated end-to-end scorecard generation — eliminating manual Excel reconciliation.</p></div>
+    <span class="role-badge r3">Manager, Advanced Analytics</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Teradata (Store)</strong><span>Store-level vendor sales transactions and fulfillment records</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>MySQL (eCommerce)</strong><span>Online orders — packages, fulfillment events, and shipment splits</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Hive (Logistics)</strong><span>FC allocation, inbound/outbound logistics, and capacity data</span></div></li>
+        <li><span class="dsi ev">📦</span><div class="ds-d"><strong>BigQuery (Unified)</strong><span>Partitioned + clustered destination tables with materialized views for query performance</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">Multi-source ETL</span><span class="tag">BigQuery</span><span class="tag">PPO Metric</span><span class="tag">Materialized Views</span></div>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Quarter <span class="fc-val">Q3 2022</span><span class="arrow">▾</span></span>
+        <span class="fchip">Vendor <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">FC <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Category <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">Metric <span class="pv">PPO</span></span>
+        <span class="param">Grade by <span class="pv">Composite</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv g">1.08</div><div class="kl">Avg PPO</div><div class="kd u">↓ -0.10 improvement</div></div>
+          <div class="kp"><div class="kv o">$4.82</div><div class="kl">Cost / Order</div><div class="kd u">↓ 5–7% savings</div></div>
+          <div class="kp"><div class="kv g">94.1%</div><div class="kl">Avg Fill Rate</div><div class="kd u">↑ +20% vs baseline</div></div>
+          <div class="kp"><div class="kv b">142</div><div class="kl">Vendors Scored</div><div class="kd">Weekly cadence</div></div>
+        </div>
+
+        <div class="pg pg2">
+          <!-- PPO trend line + split shipment pie -->
+          <div class="pn">
+            <div class="ph">PPO Trend — eCommerce <span>Target line shown</span></div>
+            <div class="pb">
+              <svg class="spk" style="height:75px;" viewBox="0 0 260 75" preserveAspectRatio="none">
+                <path d="M0,65 L42,55 L84,46 L126,37 L168,28 L210,19 L252,11" fill="none" stroke="#2b5f8c" stroke-width="2.5"/>
+                <line x1="0" y1="38" x2="260" y2="38" stroke="#ef5350" stroke-width="1.2" stroke-dasharray="5,3"/>
+                <text x="3" y="35" font-size="7.5" fill="#ef5350" font-family="monospace">Target PPO 1.10</text>
+                <text x="3" y="71" font-size="7.5" fill="#2b5f8c" font-family="monospace">Actual PPO: 1.08 ↓</text>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-top:2px;"><span>Q1</span><span>Q2</span><span>Q3</span></div>
+            </div>
+          </div>
+          <!-- Shipment split pie -->
+          <div class="pn">
+            <div class="ph">Shipment Split Breakdown (Pie) <span>% of orders by package count</span></div>
+            <div class="pb">
+              <div class="pie-wrap">
+                <svg width="90" height="90" viewBox="0 0 32 32">
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#66bb6a" stroke-width="32" stroke-dasharray="52.2 47.8" stroke-dashoffset="0"/>
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ffa726" stroke-width="32" stroke-dasharray="8.9 91.1" stroke-dashoffset="-52.2"/>
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ef5350" stroke-width="32" stroke-dasharray="2.5 97.5" stroke-dashoffset="-61.1"/>
+                  <circle r="8" cx="16" cy="16" fill="white"/>
+                  <text x="16" y="18" text-anchor="middle" font-size="4" fill="var(--ink)" font-weight="bold">142</text>
+                  <text x="16" y="22" text-anchor="middle" font-size="3" fill="var(--muted)">vendors</text>
+                </svg>
+                <div class="pie-legend">
+                  <div class="pie-item"><div class="pie-dot" style="background:#66bb6a;"></div><span>1 Package (82%)</span></div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#ffa726;"></div><span>2 Packages (14%)</span></div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#ef5350;"></div><span>3+ Packages (4%)</span></div>
+                </div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);margin-top:6px;">3+ pkg orders = ~60% of excess cost. Fixing these reduced PPO by 0.10.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pn" style="margin-top:0;">
+          <div class="ph">Vendor Fulfillment Scorecard · Weekly <span>Color = grade | Size = COGS $</span></div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>Vendor</th><th>PPO</th><th>On-Time%</th><th>Fill Rate</th><th>Cost/Order</th><th>Split %</th><th>Grade</th></tr></thead>
+              <tbody>
+                <tr><td>Vendor Alpha</td><td class="g">1.08</td><td class="g">96.1%</td><td class="g">99.2%</td><td>$4.20</td><td class="g">3%</td><td class="g">A</td></tr>
+                <tr><td>Vendor Gamma</td><td class="g">1.12</td><td class="g">93.8%</td><td class="g">97.5%</td><td>$4.55</td><td class="g">6%</td><td class="g">A-</td></tr>
+                <tr><td>Vendor Beta</td><td class="o">1.34</td><td class="o">81.4%</td><td class="o">88.7%</td><td>$5.80</td><td class="o">18%</td><td class="o">C</td></tr>
+                <tr><td>Vendor Delta</td><td class="r">1.52</td><td class="r">70.2%</td><td class="r">76.3%</td><td>$7.10</td><td class="r">31%</td><td class="r">F</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p><strong>~20% improvement</strong> in vendor KPIs · <strong>50% reduction</strong> in manual reconciliation · PPO ↓ 0.10 cutting cost-per-order <strong>5–7%</strong> · Query runtime ↓ 50%</p></div>
+</div>
+
+<!-- ══ 05 · A/B & FUNNEL ══ -->
+<div class="sh" id="safeway">
+  <div class="sn">05</div>
+  <div class="st"><h2>Marketplace A/B Testing &amp; Funnel Analytics</h2><p>Snowflake · Power BI · Adobe Analytics · Senior Data Analyst — Marketplace Product</p></div>
+</div>
+
+<!-- 5A Funnel -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Marketplace Funnel Analytics</h3><p>Built foundational Snowflake ETL pipelines — integrating clickstream, transaction, and catalog data into a unified funnel and performance reporting framework for a newly launched marketplace product.</p></div>
+    <span class="role-badge r2">Sr. Data Analyst</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Data Sources</div>
+      <ul class="ds">
+        <li><span class="dsi ev">📊</span><div class="ds-d"><strong>Adobe Analytics Clickstream</strong><span>Session-level page views, user events, and step-by-step interaction data</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Transaction Data</strong><span>Orders, add-to-cart events, and checkout step completions</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Catalog / Seller Data</strong><span>Product listings, seller attributes, assortment, and badging info</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Snowflake Unified Layer</strong><span>Normalized fact + dimension tables for funnel, GMV, and seller reporting</span></div></li>
+      </ul>
+      <div class="tags"><span class="tag">Snowflake CTEs</span><span class="tag">K-means</span><span class="tag">Funnel Attribution</span><span class="tag">Power BI</span></div>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Filters</span>
+        <span class="fchip">Date Range <span class="fc-val">Last 30d</span><span class="arrow">▾</span></span>
+        <span class="fchip">Device <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Segment <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Seller <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Category <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="param">Metric <span class="pv">CVR %</span></span>
+        <span class="param">Breakout <span class="pv">By Device</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv b">17.2%</div><div class="kl">End-to-End CVR</div><div class="kd u">↑ +6% post-opt</div></div>
+          <div class="kp"><div class="kv o">31.4%</div><div class="kl">PDP→ATC</div><div class="kd d">Key drop-off point</div></div>
+          <div class="kp"><div class="kv g">+8.1%</div><div class="kl">Mkpl Share</div><div class="kd u">Share of orders ↑</div></div>
+          <div class="kp"><div class="kv r">42pp</div><div class="kl">Browse Drop-off</div><div class="kd d">Browse → PDP</div></div>
+        </div>
+
+        <div class="pg pg2">
+          <!-- Funnel visualization -->
+          <div class="pn">
+            <div class="ph">Conversion Funnel — Marketplace <span>Parameter: CVR % | Count | Drop-off</span></div>
+            <div class="pb">
+              <div class="fn">
+                <div class="fr"><div class="fl">Home / Browse</div><div class="ftr"><div class="ff" style="width:100%;background:#2b5f8c;"></div></div><div class="fp">100%</div></div>
+                <div class="fr"><div class="fl">PDP View</div><div class="ftr"><div class="ff" style="width:58%;background:#2b5f8c;opacity:.85;"></div></div><div class="fp">58%</div><div class="fd">-42pp</div></div>
+                <div class="fr"><div class="fl">Add to Cart</div><div class="ftr"><div class="ff" style="width:31%;background:#42a5f5;"></div></div><div class="fp">31%</div><div class="fd">-27pp</div></div>
+                <div class="fr"><div class="fl">Checkout</div><div class="ftr"><div class="ff" style="width:22%;background:#66bb6a;"></div></div><div class="fp">22%</div><div class="fd">-9pp</div></div>
+                <div class="fr"><div class="fl">Purchase ✓</div><div class="ftr"><div class="ff" style="width:17%;background:#c85a1e;"></div></div><div class="fp">17%</div><div class="fd">-5pp</div></div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);margin-top:8px;">Biggest opportunity: PDP→ATC — each 1pp lift worth ~$85K GMV/month</div>
+            </div>
+          </div>
+
+          <!-- Customer segment pie + bar -->
+          <div class="pn">
+            <div class="ph">K-Means Customer Segments <span>Basis: geo · device · purchase history</span></div>
+            <div class="pb">
+              <div class="pie-wrap" style="margin-bottom:10px;">
+                <svg width="70" height="70" viewBox="0 0 32 32">
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#2b5f8c" stroke-width="32" stroke-dasharray="7 93" stroke-dashoffset="0"/>
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#66bb6a" stroke-width="32" stroke-dasharray="12.2 87.8" stroke-dashoffset="-7"/>
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ffa726" stroke-width="32" stroke-dasharray="8.9 91.1" stroke-dashoffset="-19.2"/>
+                  <circle r="16" cx="16" cy="16" fill="none" stroke="#ef5350" stroke-width="32" stroke-dasharray="3.8 96.2" stroke-dashoffset="-28.1"/>
+                  <circle r="8" cx="16" cy="16" fill="white"/>
+                </svg>
+                <div class="pie-legend" style="font-size:10.5px;">
+                  <div class="pie-item"><div class="pie-dot" style="background:#2b5f8c;"></div>High-Value (22%)</div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#66bb6a;"></div>Loyal Mid (38%)</div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#ffa726;"></div>Occasional (28%)</div>
+                  <div class="pie-item"><div class="pie-dot" style="background:#ef5350;"></div>Churned (12%)</div>
+                </div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);">High-value segment targeted → campaign CVR improved +6–8%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seller scorecard -->
+        <div class="pn" style="margin-top:0;">
+          <div class="ph">Seller Performance Scorecard <span>Power BI Semantic Model · Reusable metric framework</span></div>
+          <div class="pb" style="overflow-x:auto;">
+            <table class="t">
+              <thead><tr><th>Seller</th><th>GMV</th><th>Mkpl Share%</th><th>PDP→ATC%</th><th>End CVR%</th><th>Assortment Gap</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Seller A</td><td class="g">$2.4M</td><td class="g">18.2%</td><td class="g">38.4%</td><td class="g">21.2%</td><td class="g">Low</td><td><span class="bok">Top</span></td></tr>
+                <tr><td>Seller B</td><td class="o">$1.1M</td><td class="o">8.4%</td><td class="o">24.1%</td><td class="o">14.6%</td><td class="o">Medium</td><td><span class="bwn">Review</span></td></tr>
+                <tr><td>Seller C</td><td class="r">$0.4M</td><td class="r">3.1%</td><td class="r">16.8%</td><td class="r">9.2%</td><td class="r">High</td><td><span class="bbd">Risk</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>PDP→ATC CVR improved <strong>~6%</strong> · K-means segmentation → campaign CVR <strong>+6–8%</strong> · Ad-hoc time ↓ <strong>35%</strong></p></div>
+</div>
+
+<!-- 5B A/B Testing -->
+<div class="card">
+  <div class="ch">
+    <div><h3>Marketplace A/B Experimentation Program</h3><p>Led experiments on marketplace placements and seller badging. Presented results in weekly WBR with SVP of Product. Proposed follow-up tests to guide roadmap decisions.</p></div>
+    <span class="role-badge r2">Sr. Data Analyst</span>
+  </div>
+  <div class="c2">
+    <div>
+      <div class="cl">Methodology</div>
+      <ul class="ds">
+        <li><span class="dsi ev">🧪</span><div class="ds-d"><strong>Assignment</strong><span>Randomized user-level treatment vs. control groups</span></div></li>
+        <li><span class="dsi ev">📊</span><div class="ds-d"><strong>Significance Testing</strong><span>Two-proportion z-test at p &lt; 0.05 threshold</span></div></li>
+        <li><span class="dsi db">🗄</span><div class="ds-d"><strong>Primary Metrics</strong><span>PDP-to-ATC CVR, GMV, marketplace share-of-orders</span></div></li>
+        <li><span class="dsi cal">📅</span><div class="ds-d"><strong>Guard Rails</strong><span>Holdout monitoring for novelty effect; segmented by device, geo, cohort</span></div></li>
+      </ul>
+    </div>
+    <div style="padding:0;">
+      <div class="fb">
+        <span class="fb-label">Experiment View</span>
+        <span class="fchip">Status <span class="fc-val">All</span><span class="arrow">▾</span></span>
+        <span class="fchip">Metric <span class="fc-val">PDP→ATC CVR</span><span class="arrow">▾</span></span>
+        <span class="fchip">Segment <span class="fc-val">All Users</span><span class="arrow">▾</span></span>
+        <span class="param">CI Level <span class="pv">95%</span></span>
+        <span class="param">View <span class="pv">Lift %</span></span>
+      </div>
+      <div class="vz">
+        <div class="ks">
+          <div class="kp"><div class="kv g">2 / 3</div><div class="kl">Tests Launched</div><div class="kd u">Statistically sig.</div></div>
+          <div class="kp"><div class="kv g">+6.2%</div><div class="kl">Best CVR Lift</div><div class="kd">PDP→ATC</div></div>
+          <div class="kp"><div class="kv b">142K</div><div class="kl">Avg Sample Size</div><div class="kd">Users per test</div></div>
+          <div class="kp"><div class="kv o">21 days</div><div class="kl">Avg Duration</div><div class="kd">Per experiment</div></div>
+        </div>
+
+        <!-- Lift bar chart across experiments -->
+        <div class="pn" style="margin-bottom:12px;">
+          <div class="ph">CVR Lift by Experiment (Bar Chart) <span>Error bars = 95% CI</span></div>
+          <div class="pb">
+            <div style="display:flex;align-items:flex-end;gap:20px;height:70px;padding-bottom:14px;position:relative;">
+              <div style="position:absolute;bottom:14px;left:0;right:0;height:1px;background:var(--rule);"></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;">
+                <div style="font-size:9px;color:#2e7d32;font-family:monospace;font-weight:700;">+6.2%</div>
+                <div style="width:60%;height:54px;background:#66bb6a;border-radius:3px 3px 0 0;"></div>
+                <div style="font-size:9px;color:var(--muted);position:absolute;bottom:1px;">Badging</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;">
+                <div style="font-size:9px;color:#2e7d32;font-family:monospace;font-weight:700;">+4.8%</div>
+                <div style="width:60%;height:42px;background:#66bb6a;border-radius:3px 3px 0 0;"></div>
+                <div style="font-size:9px;color:var(--muted);position:absolute;bottom:1px;">Placement</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;">
+                <div style="font-size:9px;color:#aaa;font-family:monospace;font-weight:700;">+0.9%</div>
+                <div style="width:60%;height:8px;background:#ccc;border-radius:3px 3px 0 0;"></div>
+                <div style="font-size:9px;color:var(--muted);position:absolute;bottom:1px;">Assortment</div>
+              </div>
+            </div>
+            <div style="font-size:10px;color:var(--muted);text-align:center;margin-top:2px;">Green = statistically significant · Grey = not significant</div>
+          </div>
+        </div>
+
+        <div class="abg">
+          <div class="abc">
+            <div class="abh win">Seller Badging <span class="abv vl">LAUNCH</span></div>
+            <div class="abb">
+              <div class="abr"><span class="abk">PDP→ATC Lift</span><span class="abval p">+6.2%</span></div>
+              <div class="abr"><span class="abk">p-value</span><span class="abval">0.012</span></div>
+              <div class="abr"><span class="abk">Sample Size</span><span class="abval">48,320</span></div>
+              <div class="abr"><span class="abk">Duration</span><span class="abval">21 days</span></div>
+              <div class="abr"><span class="abk">Mkpl Share ↑</span><span class="abval p">+8.1%</span></div>
+              <div class="abr"><span class="abk">Rev Impact</span><span class="abval p">+$210K/wk</span></div>
+            </div>
+          </div>
+          <div class="abc">
+            <div class="abh win">Placement Opt. <span class="abv vl">LAUNCH</span></div>
+            <div class="abb">
+              <div class="abr"><span class="abk">Browse→PDP</span><span class="abval p">+4.8%</span></div>
+              <div class="abr"><span class="abk">p-value</span><span class="abval">0.031</span></div>
+              <div class="abr"><span class="abk">Sample Size</span><span class="abval">62,150</span></div>
+              <div class="abr"><span class="abk">Duration</span><span class="abval">14 days</span></div>
+              <div class="abr"><span class="abk">GMV Impact</span><span class="abval p">+3.2%</span></div>
+              <div class="abr"><span class="abk">End CVR Δ</span><span class="abval p">+2.1%</span></div>
+            </div>
+          </div>
+          <div class="abc">
+            <div class="abh hld">Assortment Exp. <span class="abv vi">ITERATE</span></div>
+            <div class="abb">
+              <div class="abr"><span class="abk">CVR Lift</span><span class="abval n">+0.9%</span></div>
+              <div class="abr"><span class="abk">p-value</span><span class="abval" style="color:var(--red);">0.214</span></div>
+              <div class="abr"><span class="abk">Sample Size</span><span class="abval">31,880</span></div>
+              <div class="abr"><span class="abk">Duration</span><span class="abval">28 days</span></div>
+              <div class="abr"><span class="abk">Decision</span><span class="abval" style="color:var(--muted);font-size:10.5px;">Not significant</span></div>
+              <div class="abr"><span class="abk">Next Step</span><span class="abval" style="color:var(--muted);font-size:10.5px;">Narrow focus</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp"><span style="font-size:16px">⚡</span><p>PDP-to-ATC lift <strong>~6%</strong> · Marketplace share-of-orders grew <strong>~8%</strong> · Led weekly WBR with SVP presenting experiment verdicts and roadmap recommendations</p></div>
+</div>
+
+<!-- ══ 06 · GOVERNANCE ══ -->
+<div class="sh" id="gov">
+  <div class="sn">06</div>
+  <div class="st"><h2>Data Governance Framework</h2><p>Data dictionary · GitHub version control · Automated DQ alerting · Metric standardization</p></div>
+</div>
+
+<div class="gov">
+  <div class="govh"><span class="govic">📖</span><div><h3>Personal Data Dictionary — Table &amp; Metric Registry</h3><p>60+ core tables documented across data warehouse schemas</p></div></div>
+  <div style="padding:20px 28px;overflow-x:auto;">
+    <table class="dt">
+      <thead><tr><th>Schema</th><th>Table</th><th>What the data contains</th><th>Priority</th><th>Caveats / Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="sp2">dwd</td><td><strong>mdse_product</strong></td><td>SKU attributes — shelf life, ethnicity, department, hero flag, storage type</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Don't use tier column — use mdse_product_tier_u_inv instead</td></tr>
+        <tr><td class="sp2">dwd</td><td><strong>sc_inventory_version</strong></td><td>Main sellable inventory — quantity minus open orders per warehouse per day</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Validate with ERP check link</td></tr>
+        <tr><td class="sp2">metrics</td><td><strong>sku_so_inv</strong></td><td>Sales region × product × primary vendor with quantity per case and SKU status</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Check ERP link before use</td></tr>
+        <tr><td class="sp2">metrics</td><td><strong>product_availability_root_cause</strong></td><td>FC-level OOS root cause — how unavailability was calculated per FC</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Separate DC variant for upstream analysis</td></tr>
+        <tr><td class="sp2">dwd</td><td><strong>relex_forecast</strong></td><td>Demand forecast from Relex planning system</td><td><span class="tag">Low</span></td><td class="dn2" style="color:#c62828;">⚠ Missing data after 5/14/23 — switch to sc_demand_forecast</td></tr>
+        <tr><td class="sp2">dwd</td><td><strong>irs_network_product_calculation</strong></td><td>IRS engine output — target qty, DOH, safety stock, and order rec per SKU × FC</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Key table for replenishment analytics</td></tr>
+        <tr><td class="sp2">sandbox</td><td><strong>fillrate_weighted</strong></td><td>Computed vendor fill rate and on-time metrics weighted by PO cost</td><td><span class="tag" style="background:#fff3e0;color:#c85a1e;">High</span></td><td class="dn2">Self-maintained; not an official DWH table</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="gov">
+  <div class="govh"><span class="govic">🔧</span><div><h3>GitHub Version Control &amp; Data Quality Alerting</h3><p>Implemented across the analytics team — SQL, Tableau, and ETL pipeline assets</p></div></div>
+  <div class="g2">
+    <div class="gc">
+      <h4>GitHub Version Control</h4>
+      <ul>
+        <li>Led implementation of GitHub-based version control for all SQL and Tableau workbook assets across a team of 3 analysts</li>
+        <li>Established branching, PR review, and merge practices — full audit trail on every pipeline change</li>
+        <li>Used AI-assisted tooling to standardize query patterns and improve QA across the team</li>
+        <li>Enabled safe iteration on production pipelines with full rollback capability</li>
+      </ul>
+    </div>
+    <div class="gc">
+      <h4>Automated Data Quality Checks</h4>
+      <ul>
+        <li>Null-rate, latency, and schema-change checks on key tables with Slack alerting</li>
+        <li>Stakeholder-reported data errors ↓ <strong>~40%</strong></li>
+        <li>Airflow DAGs with failure alerting and retry logic — reporting latency ↓ <strong>~25%</strong></li>
+        <li>Metric definitions standardized via data dictionary — dashboard discrepancies ↓ <strong>~40%</strong></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ 07 · ETL PIPELINE WORKFLOW ══ -->
+<div class="sh" id="etl">
+  <div class="sn">07</div>
+  <div class="st"><h2>ETL Pipeline Architecture</h2><p>Raw → Staging → Final tables · Airflow DAG orchestration · Tableau & Power BI delivery</p></div>
+</div>
+
+<div class="card">
+  <div class="ch">
+    <div>
+      <h3>End-to-End Data Pipeline Workflow</h3>
+      <p>Full lifecycle from raw source ingestion through SQL transformation layers to BI delivery — built and owned across Weee!, Safeway, and Walmart eCommerce</p>
+    </div>
+    <span class="role-badge r1">ARCHITECT & OWNER</span>
+  </div>
+
+  <!-- FLOW DIAGRAM -->
+  <div style="padding:32px 28px;background:#fafaf8;border-top:1px solid var(--rule);overflow-x:auto;">
+    <div style="min-width:780px;">
+
+      <!-- ROW 1: SOURCE SYSTEMS -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">LAYER 1 — SOURCE SYSTEMS</span>
+      </div>
+      <div style="display:flex;justify-content:center;gap:12px;margin-bottom:6px;flex-wrap:wrap;">
+        <div style="background:#e3f0fb;border:1px solid #b3d1f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:110px;">
+          <div style="font-size:18px;margin-bottom:4px;">🏪</div>
+          <div style="font-size:11px;font-weight:600;color:#1a5c8c;">ERP / OMS</div>
+          <div style="font-size:10px;color:var(--muted);">Orders · Inventory</div>
+        </div>
+        <div style="background:#e3f0fb;border:1px solid #b3d1f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:110px;">
+          <div style="font-size:18px;margin-bottom:4px;">🚚</div>
+          <div style="font-size:11px;font-weight:600;color:#1a5c8c;">WMS / EDI</div>
+          <div style="font-size:10px;color:var(--muted);">Warehouse · Vendor</div>
+        </div>
+        <div style="background:#e3f0fb;border:1px solid #b3d1f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:110px;">
+          <div style="font-size:18px;margin-bottom:4px;">🖱️</div>
+          <div style="font-size:11px;font-weight:600;color:#1a5c8c;">Clickstream</div>
+          <div style="font-size:10px;color:var(--muted);">Web · App Events</div>
+        </div>
+        <div style="background:#e3f0fb;border:1px solid #b3d1f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:110px;">
+          <div style="font-size:18px;margin-bottom:4px;">📦</div>
+          <div style="font-size:11px;font-weight:600;color:#1a5c8c;">Vendor APIs</div>
+          <div style="font-size:10px;color:var(--muted);">POs · Fill Rates</div>
+        </div>
+        <div style="background:#e3f0fb;border:1px solid #b3d1f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:110px;">
+          <div style="font-size:18px;margin-bottom:4px;">💰</div>
+          <div style="font-size:11px;font-weight:600;color:#1a5c8c;">Finance / ERP</div>
+          <div style="font-size:10px;color:var(--muted);">Cost · Revenue</div>
+        </div>
+      </div>
+
+      <!-- ARROW DOWN -->
+      <div style="text-align:center;margin:4px 0;font-size:20px;color:var(--muted);">↓</div>
+
+      <!-- ROW 2: AIRFLOW INGESTION -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">LAYER 2 — AIRFLOW ORCHESTRATION (INGESTION DAGs)</span>
+      </div>
+      <div style="background:#fff8e1;border:2px solid #ffc107;border-radius:10px;padding:16px 24px;margin:0 auto 6px;max-width:680px;">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <div style="font-size:22px;">⚙️</div>
+          <div style="flex:1;">
+            <div style="font-size:12px;font-weight:700;color:#5d4037;margin-bottom:4px;">Apache Airflow — DAG Scheduler</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span style="background:white;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:10.5px;font-family:'DM Mono',monospace;">15-min refresh DAGs</span>
+              <span style="background:white;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:10.5px;font-family:'DM Mono',monospace;">Daily snapshot DAGs</span>
+              <span style="background:white;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:10.5px;font-family:'DM Mono',monospace;">Retry logic</span>
+              <span style="background:white;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:10.5px;font-family:'DM Mono',monospace;">Failure alerting → Slack</span>
+              <span style="background:white;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:10.5px;font-family:'DM Mono',monospace;">Dependency ordering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARROW DOWN -->
+      <div style="text-align:center;margin:4px 0;font-size:20px;color:var(--muted);">↓</div>
+
+      <!-- ROW 3: DATA WAREHOUSE -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">LAYER 3 — DATA WAREHOUSE (Redshift · Snowflake · BigQuery)</span>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;margin-bottom:6px;flex-wrap:wrap;">
+
+        <!-- RAW -->
+        <div style="background:white;border:2px solid #ef9a9a;border-radius:10px;padding:14px 16px;min-width:180px;flex:1;max-width:220px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <div style="background:#ef9a9a;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;color:white;">RAW</div>
+            <span style="font-size:10px;color:var(--muted);">As-landed from source</span>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:#c62828;line-height:1.8;">
+            raw.inventory_snapshot<br>
+            raw.purchase_orders<br>
+            raw.clickstream_events<br>
+            raw.vendor_asn<br>
+            raw.finance_actuals
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--muted);">Unfiltered · Uncleaned · Direct dump</div>
+        </div>
+
+        <!-- ARROW -->
+        <div style="display:flex;align-items:center;font-size:22px;color:var(--accent);">→</div>
+
+        <!-- STAGING -->
+        <div style="background:white;border:2px solid #ffcc80;border-radius:10px;padding:14px 16px;min-width:200px;flex:1;max-width:240px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <div style="background:#ffa726;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;color:white;">STAGING</div>
+            <span style="font-size:10px;color:var(--muted);">Cleaned · Typed · Deduped</span>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:#5d4037;line-height:1.8;">
+            stg.inv_daily_clean<br>
+            stg.po_normalized<br>
+            stg.sessions_deduped<br>
+            stg.vendor_scored<br>
+            stg.finance_mapped
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--muted);">CTEs · Window fns · Type casting · Null handling</div>
+        </div>
+
+        <!-- ARROW -->
+        <div style="display:flex;align-items:center;font-size:22px;color:var(--accent);">→</div>
+
+        <!-- FINAL -->
+        <div style="background:white;border:2px solid #a5d6a7;border-radius:10px;padding:14px 16px;min-width:200px;flex:1;max-width:240px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <div style="background:#43a047;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;color:white;">FINAL / MART</div>
+            <span style="font-size:10px;color:var(--muted);">Business-ready · Governed</span>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:#1b5e20;line-height:1.8;">
+            mart.product_availability<br>
+            mart.replenishment_kpis<br>
+            mart.vendor_scorecard<br>
+            mart.funnel_performance<br>
+            mart.finance_forecast
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--muted);">Fact & dim tables · ERDs · Metric definitions</div>
+        </div>
+      </div>
+
+      <!-- SQL BADGE ROW -->
+      <div style="text-align:center;margin:8px 0 4px;">
+        <div style="display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Advanced CTEs</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Window Functions</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Nested Subqueries</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Complex Joins</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Partitioned Tables</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Materialized Views</span>
+          <span style="background:var(--ink);color:var(--paper);border-radius:4px;padding:4px 10px;font-size:10.5px;font-family:'DM Mono',monospace;">Query Optimization</span>
+        </div>
+      </div>
+
+      <!-- ARROW DOWN -->
+      <div style="text-align:center;margin:8px 0;font-size:20px;color:var(--muted);">↓</div>
+
+      <!-- ROW 4: AIRFLOW TRANSFORMATION -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">LAYER 4 — AIRFLOW (TRANSFORMATION DAGs) + DATA QUALITY</span>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;margin-bottom:6px;flex-wrap:wrap;">
+        <div style="background:#f3e5f5;border:2px solid #ce93d8;border-radius:10px;padding:14px 18px;flex:1;max-width:320px;">
+          <div style="font-size:11px;font-weight:700;color:#6a1b9a;margin-bottom:8px;">⚙️ Transformation DAGs</div>
+          <div style="font-size:10.5px;color:var(--muted);line-height:1.9;">
+            ✓ Raw → Staging transformation jobs<br>
+            ✓ Staging → Mart aggregation jobs<br>
+            ✓ Dependency-ordered execution<br>
+            ✓ SLA-based scheduling (15min · daily · weekly)<br>
+            ✓ Retry on failure with exponential backoff
+          </div>
+        </div>
+        <div style="background:#fce4ec;border:2px solid #f48fb1;border-radius:10px;padding:14px 18px;flex:1;max-width:320px;">
+          <div style="font-size:11px;font-weight:700;color:#880e4f;margin-bottom:8px;">🛡️ Data Quality Pipeline (Python)</div>
+          <div style="font-size:10.5px;color:var(--muted);line-height:1.9;">
+            ✓ Null-rate monitoring vs 30-day baseline<br>
+            ✓ Schema drift detection (information_schema)<br>
+            ✓ Freshness SLA checks per table<br>
+            ✓ Z-score anomaly detection (±2σ threshold)<br>
+            ✓ Slack + email alerting by severity tier
+          </div>
+        </div>
+      </div>
+
+      <!-- ARROW DOWN -->
+      <div style="text-align:center;margin:4px 0;font-size:20px;color:var(--muted);">↓</div>
+
+      <!-- ROW 5: BI DELIVERY -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">LAYER 5 — BI DELIVERY & STAKEHOLDER CONSUMPTION</span>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <div style="background:white;border:2px solid #80cbc4;border-radius:10px;padding:14px 18px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+          <div style="font-size:22px;margin-bottom:6px;">📊</div>
+          <div style="font-size:11px;font-weight:700;color:#00695c;">Tableau</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:4px;">LOD expressions<br>WBR dashboards<br>OOS diagnostics</div>
+        </div>
+        <div style="background:white;border:2px solid #90caf9;border-radius:10px;padding:14px 18px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+          <div style="font-size:22px;margin-bottom:6px;">📈</div>
+          <div style="font-size:11px;font-weight:700;color:#1565c0;">Power BI</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:4px;">DAX measures<br>Semantic models<br>Finance reporting</div>
+        </div>
+        <div style="background:white;border:2px solid #bcaaa4;border-radius:10px;padding:14px 18px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+          <div style="font-size:22px;margin-bottom:6px;">🤖</div>
+          <div style="font-size:11px;font-weight:700;color:#4e342e;">Python AI Models</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:4px;">Anomaly detection<br>Predictive replenishment<br>Auto reporting</div>
+        </div>
+        <div style="background:white;border:2px solid #c5e1a5;border-radius:10px;padding:14px 18px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+          <div style="font-size:22px;margin-bottom:6px;">📧</div>
+          <div style="font-size:11px;font-weight:700;color:#33691e;">Automated Reports</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:4px;">Weekly WBR email<br>Slack alerts<br>Executive summaries</div>
+        </div>
+      </div>
+
+    </div><!-- end min-width wrapper -->
+  </div><!-- end flow diagram -->
+
+  <!-- IMPACT BAR -->
+  <div class="imp">
+    <span style="font-size:16px">⚡</span>
+    <p>Query runtime ↓ <strong>~50%</strong> · Reporting latency ↓ <strong>~25%</strong> · Manual intervention ↓ <strong>70%</strong> · Stakeholder data errors ↓ <strong>~40%</strong> · Pipeline reliability across <strong>9 FCs</strong></p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>Sheenam Gupta · Analytics Portfolio · <a href="mailto:sheenamgupta44@gmail.com">sheenamgupta44@gmail.com</a> · <a href="https://www.linkedin.com/in/sheenamgupta/">LinkedIn</a></p>
+  <p style="margin-top:6px;font-size:11px;">Vendor/seller names are illustrative. All KPIs, metrics, and structural data are drawn from real work. Company names omitted for privacy.</p>
+</footer>
+
+</body>
+</html>
